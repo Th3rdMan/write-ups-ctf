@@ -18,7 +18,8 @@ Je commence par une recherche d'image inversée pour identifier le tableau. Il s
 Assis à gauche sur le tableau, il s'agit de **Paul Verlaine**, auteur du fameux poème **Chanson d'Automne** dont on parle depuis quelques challenges déjà. Pas de coïncidence possible, puisque son poème annonce le débarquement de Normandie.
 Il ne reste qu'à vérifier le nom de code, bien connu, de l'opération :
 
-> [!Overlord] [Wikipedia](https://fr.wikipedia.org/wiki/Bataille_de_Normandie)
-> La bataille de Normandie, opération **_Overlord_** selon son nom de code en anglais
+[Wikipedia](https://fr.wikipedia.org/wiki/Bataille_de_Normandie)
+
+La bataille de Normandie, opération **_Overlord_** selon son nom de code en anglais
 
 ✅ **Réponse :** `paul_verlaine_overlord`
