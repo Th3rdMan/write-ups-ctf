@@ -14,12 +14,12 @@ Votre grand-père s'était donné pour mission de localiser la commune concerné
 
 Première étape : isoler les voix du bruit de la locomotive. J'ai utilisé [Lalal.ai](https://www.lalal.ai/) et, bien que le résultat ne soit pas parfait, j'ai pu identifier les noms des gares. Le train est parti de Veynes en direction de Briançon. Depuis la gare d'où le message a été diffusé, la ligne dessert Embrun, L’Argentière-la-Bessée et Prelles (cette dernière est fermée mais seulement depuis 1960, ce qui est cohérent avec le contexte). J'ai donc la ligne correspondante :
 
-> [!Veynes-Briançon] [Veynes-Briançon](https://routes.fandom.com/wiki/Ligne_Veynes_-_Brian%C3%A7on#Haltes)
+> [Veynes-Briançon](https://routes.fandom.com/wiki/Ligne_Veynes_-_Brian%C3%A7on#Haltes)
 > ![1. Veynes-Briançon](./assets/1-veynes-briancon.png)
 
 Je mets la main sur un plan d'époque de la ligne entre Veynes (point de départ) et Embrun (prochain arrêt annoncé). L'enregistrement ayant clairement lieu dans une de ces gares, cela laisse quelques possibilités.
 
-> [!Ligne] [Train Consultant](https://trainconsultant.com/2024/08/29/la-transalpine-livron-mont-cenis/)
+> [Train Consultant](https://trainconsultant.com/2024/08/29/la-transalpine-livron-mont-cenis/)
 > ![1. Ligne Veynes-Embrun](./assets/1-ligne-veynes-embrun.png)
 
 Pour moi, tout converge vers le **cirque de Morgon**. En plus d'être un site de parachutage réputé, l'un de ses panoramas fait directement écho à une image marquante du CTF Bleuet de France de l'an dernier.
