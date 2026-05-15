@@ -6,22 +6,22 @@ L’événement mêlait OSINT, histoire contemporaine, mémoire de la Résistanc
 
 ## Bilan
 
-| Équipe | Pseudo | Score | Validations | Tentatives incorrectes |
+| Équipe | Pseudo | Score | Validations | Flags invalides |
 |---|---|---:|---:|---:|
 | Heroes 4 Hire | Th3rD | 805 pts | 23 | 13 |
 
-Les validations se répartissent sur six catégories, avec une dominante claire sur les challenges de recherche historique, de recoupement documentaire et d’exploitation d’indices textuels ou visuels.
-
 ## Répartition par catégorie
 
-| Catégorie | Validés | Non résolus documentés | Points validés |
-|---|---:|---:|---:|
-| Dans la peau d’un résistant | 6 | 1 | 325 |
-| Un devoir de mémoire | 4 | 1 | 175 |
-| L’art de résister | 5 | 0 | 150 |
-| L’audace de résister | 2 | 1 | 75 |
-| Nos partenaires | 5 | 0 | 70 |
-| Prologue | 1 | 0 | 10 |
+| Catégorie | Validés | Non résolus documentés | Points validés | Axes dominants |
+|---|---:|---:|---:|---|
+| Dans la peau d’un résistant | 6 | 1 | 325 | GEOINT, audio/vidéo OSINT, crypto, stéganographie |
+| Un devoir de mémoire | 4 | 1 | 175 | Archives ouvertes, IMINT, résolution d’identité |
+| L’art de résister | 5 | 0 | 150 | IMINT, audio OSINT, recherche culturelle |
+| L’audace de résister | 2 | 1 | 75 | SOCMINT, GEOINT, chronolocation |
+| Nos partenaires | 5 | 0 | 70 | GEOINT, web archives, protocoles, recherche institutionnelle |
+| Prologue | 1 | 0 | 10 | Information retrieval |
+
+Les axes indiqués correspondent à la méthode dominante de résolution. Plusieurs challenges combinent naturellement plusieurs familles d’OSINT.
 
 ## Sommaire
 
