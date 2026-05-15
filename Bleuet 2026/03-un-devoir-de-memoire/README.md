@@ -1,6 +1,6 @@
 # Un devoir de mémoire
 
-Cette section rassemble les challenges centrés sur la mémoire historique, les parcours individuels, les archives et les traces laissées par les acteurs de la Seconde Guerre mondiale.
+Challenges centrés sur les traces historiques : personnes, unités, lieux, archives et documents liés à la Seconde Guerre mondiale.
 
 | Statut | Challenge | Points |
 |:--:|---|---:|
@@ -12,8 +12,4 @@ Cette section rassemble les challenges centrés sur la mémoire historique, les 
 
 ## Ressources
 
-Les fichiers associés à cette section sont disponibles dans [`assets/`](./assets/).
-
-## Note
-
-Le challenge marqué ❌ n’a pas été résolu pendant le CTF. Le fichier est conservé comme trace de recherche, pas comme solution validée.
+Les fichiers associés sont regroupés dans [`assets/`](./assets/).
