@@ -14,11 +14,12 @@ Retrouvez la dernière phrase de cette lettre.
 
 La recherche du portrait ne donne rien, mais le tract manuscrit me conduit à une page d'archives des manuscrits du Général De Gaulle :
 
-> [!BNF De Gaulle] [{BnF](https://www.bnf.fr/fr/les-manuscrits-du-general-de-gaulle-naf-28590)
-> Les manuscrits du général de Gaulle (NAF 28590)
-> 
-> ![3. Manuscrits De Gaulle](./assets/3-manuscrits-de-gaulle.png)
-> 
+[{BnF](https://www.bnf.fr/fr/les-manuscrits-du-general-de-gaulle-naf-28590)
+
+Les manuscrits du général de Gaulle (NAF 28590)
+
+![3. Manuscrits De Gaulle](./assets/3-manuscrits-de-gaulle.png)
+
 Sur Gallica peuvent également être consultés plusieurs documents en lien avec l’Appel du 18 juin 1940 et la Résistance française, telle que cette affiche conservée à la BNU de Strasbourg ; des tracts de la Résistance française ; les Bulletins des Forces Françaises de l’Intérieur (FFI) ; ou encore le numéro 20 de la collection « Textes et documents »  paru en 1964, qui dresse un tableau précis et documenté de la Résistance.
 
 Je m'empresse donc de consulter les "[tracts de la résistance française](https://gallica.bnf.fr/ark:/12148/bpt6k990554s/f33.planchecontact)". Et le premier de la liste est une lettre illustrée du même portrait de soldat :
