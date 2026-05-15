@@ -18,8 +18,9 @@ Il s'agit clairement d'un stéréogramme. Je n'ai jamais été très doué pour 
 
 Le logo du CDLL est assez reconnaissable, d'autant que je l'ai déjà croisé lors d'un autre challenge :
 
-> [!CDLL] [Wikipedia](https://fr.wikipedia.org/wiki/Ceux_de_la_Lib%C3%A9ration)
-> ![6. Logo CDLL](./assets/6-logo-cdll.png)
+[Wikipedia](https://fr.wikipedia.org/wiki/Ceux_de_la_Lib%C3%A9ration)
+
+![6. Logo CDLL](./assets/6-logo-cdll.png)
 
 
 ✅ **Réponse :** `ceux_de_la_libération`
