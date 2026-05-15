@@ -14,7 +14,7 @@ Retrouvez la dernière phrase de cette lettre.
 
 La recherche du portrait ne donne rien, mais le tract manuscrit me conduit à une page d'archives des manuscrits du Général De Gaulle :
 
-[{BnF](https://www.bnf.fr/fr/les-manuscrits-du-general-de-gaulle-naf-28590)
+[BnF](https://www.bnf.fr/fr/les-manuscrits-du-general-de-gaulle-naf-28590)
 
 Les manuscrits du général de Gaulle (NAF 28590)
 
