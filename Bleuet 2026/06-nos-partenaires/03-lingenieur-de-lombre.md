@@ -12,7 +12,8 @@ Au sein du réseau, chaque agent porte un nom d’animal. Celui de Romon est cel
 
 Rien de très compliqué. J'ai un nom, un prénom. Petite recherche Wikipedia pour trouver la page de cet officier des transmissions. Il y est précisé dans les premières lignes son pseudonyme :
 
-> [!NOTE] [Wikipedia](https://fr.wikipedia.org/wiki/Gabriel_Romon)
->  Romon fait partie d'un certain nombre de réseaux de résistance [...] comme conseiller technique pour le secteur radio (sous le pseudonyme « **Cygne** »).
+[Wikipedia](https://fr.wikipedia.org/wiki/Gabriel_Romon)
+
+Romon fait partie d'un certain nombre de réseaux de résistance [...] comme conseiller technique pour le secteur radio (sous le pseudonyme « **Cygne** »).
 
 ✅ **Réponse :** `cygne`
