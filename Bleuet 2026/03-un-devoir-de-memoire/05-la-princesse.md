@@ -13,15 +13,16 @@ Quel est le prénom et le nom d'épouse de « La Princesse » ?
 Ma première recherche centrée sur le pseudo m'envoie sur une fausse piste. Une certaine Noor Inayat Khan, résistante mais princesse musulmane indienne, née à Moscou. Mauvais pivot.
 Je pars cette fois-ci de Gilbert Renaud, alias "**Colonel Rémy**", avec un fameux CV. Il a notamment été chargé de créer un réseau de renseignements sur le sol français, mais il a également fondé la "**Confrérie Notre-Dame**" qui deviendra "**CND-Castille**", ainsi que le **réseau Centurie**. 
 
-> [!Colonel Rémy] [Wikipedia](https://fr.wikipedia.org/wiki/Colonel_R%C3%A9my)
-> Il est parmi les premiers à se rallier à la cause du général de Gaulle et se voit confier par le capitaine Dewavrin, futur colonel Passy, alors capitaine et chef du Bureau central de renseignements et d’action (BCRA), la création d'un réseau de renseignements sur le sol français. [...]
-> Lors de sa première mission, il crée en 1940 la **Confrérie Notre-Dame**, qui deviendra en 1944 **CND-Castille**, en s'appuyant sur l'action de Louis de La Bardonnie [..] ce réseau finit par couvrir la France occupée à partir de 1941 puis la Belgique et devient l'un des plus importants de la zone occupée. [...] Il crée aussi en septembre 1940 le réseau **Centurie**.
+[Wikipedia](https://fr.wikipedia.org/wiki/Colonel_R%C3%A9my)
+
+Il est parmi les premiers à se rallier à la cause du général de Gaulle et se voit confier par le capitaine Dewavrin, futur colonel Passy, alors capitaine et chef du Bureau central de renseignements et d’action (BCRA), la création d'un réseau de renseignements sur le sol français. [...]
+Lors de sa première mission, il crée en 1940 la **Confrérie Notre-Dame**, qui deviendra en 1944 **CND-Castille**, en s'appuyant sur l'action de Louis de La Bardonnie [..] ce réseau finit par couvrir la France occupée à partir de 1941 puis la Belgique et devient l'un des plus importants de la zone occupée. [...] Il crée aussi en septembre 1940 le réseau **Centurie**.
 
 Je trouve rapidement un site consacré au CND-Castille, lequel propose un annuaire... 50 personnes référencées par page, 33 pages. Heureusement, ils ont judicieusement prévu un moteur de recherche. "Princesse" propose 3 résultats.
 
+[CND-Castille.org](https://www.cnd-castille.org/annuaire)
 
-> [!Annuaire] [CND-Castille.org](https://www.cnd-castille.org/annuaire)
-> ![5. Annuaire Princesse](./assets/5-annuaire-princesse.png)
+![5. Annuaire Princesse](./assets/5-annuaire-princesse.png)
 
 Seules Eléonore Chedeville et Laurence Bluet portent vraiment un tel surnom. Mais évidemment, seule l'une est italienne et tout concorde :
 
