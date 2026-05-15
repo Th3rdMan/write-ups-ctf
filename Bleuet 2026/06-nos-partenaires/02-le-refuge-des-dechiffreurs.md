@@ -21,13 +21,13 @@ L'image fournie présente le nom de la rivière Alzon, qui s'avère être un aff
 
 Une petite recherche sur ce château m'envoie vers une page Wikipedia qui donne rapidement les informations recherchées :
 
-> [!Wikipedia] [Wikipedia](https://fr.wikipedia.org/wiki/PC_Cadix)
-> 
-> Le **PC Cadix**, poste de commandement Cadix, est le nom de code du site d'implantation d'une **cellule de déchiffrement** franco-polono-espagnols [...]
-> 
-> L'antenne prend le nom de PC Cadix, sans doute en raison de l'ancienne via Domitia, la route impériale de Rome à Cadix [...]
-> 
-> L'équipe basée au **PC Cadix** et dirigé par **Gustave Bertrand** est composé de 7 Républicains espagnols, 15 Français et 15 Polonais.
+[Wikipedia](https://fr.wikipedia.org/wiki/PC_Cadix)
+
+Le **PC Cadix**, poste de commandement Cadix, est le nom de code du site d'implantation d'une **cellule de déchiffrement** franco-polono-espagnols [...]
+
+L'antenne prend le nom de PC Cadix, sans doute en raison de l'ancienne via Domitia, la route impériale de Rome à Cadix [...]
+
+L'équipe basée au **PC Cadix** et dirigé par **Gustave Bertrand** est composé de 7 Républicains espagnols, 15 Français et 15 Polonais.
 
 Cadix est bien une ville portuaire reliée à Rome par une ancienne voie romaine.
 
