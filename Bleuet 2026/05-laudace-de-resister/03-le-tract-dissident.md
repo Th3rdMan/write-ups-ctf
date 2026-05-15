@@ -2,58 +2,53 @@
 
 ![3. Le tract dissident](./assets/3-le-tract-dissident.png)
 
-> Une photographie attire votre attention : des cyclistes qui ne font que passer, ou qui distribuent des tracts dans la rue. Votre grand-père avait noté une date en marge : 29 octobre. Cependant, vous ne parvenez pas à confirmer cette date avec vos propres recherches, alors vous décidez de faire lui faire confiance.
+> Une photographie attire votre attention : des cyclistes qui ne font que passer, ou qui distribuent des tracts dans la rue. Votre grand-père avait noté une date en marge : 29 octobre. Cependant, vous ne parvenez pas à confirmer cette date avec vos propres recherches, alors vous décidez de lui faire confiance.
 
-Retrouvez le lieu et l’heure **(arrondie à l’entier)** à laquelle cette photographie a été prise.
+Retrouvez le lieu et l’heure **arrondie à l’entier** à laquelle cette photographie a été prise.
 
-> _Nota bene_ : Les « cyclistes lanceurs de tracts » désignent des résistants qui utilisaient le vélo pour diffuser rapidement des tracts et journaux clandestins, parfois « à la volée », tout en se fondant dans la circulation ordinaire.
+> _Nota bene_ : Les « cyclistes lanceurs de tracts » désignent des résistants qui utilisaient le vélo pour diffuser rapidement des tracts et journaux clandestins, parfois à la volée, tout en se fondant dans la circulation ordinaire.
 
-**Format de flag** : nom_de_la_rue_heure (_exemple_ : rue_jean_jacques_rousseau_23)
+**Format du flag** : `nom_de_la_rue_heure`  
+*Exemple : `rue_jean_jacques_rousseau_23`.*
 
 <img src="./assets/3-photographie.png" alt="3. Photographie" width="455">
 
 ---
 
-Je commence par une recherche d'image inversée. De nombreuses sources qui me révèlent notamment le nom du photographe, Robert Doisneau, et le nom de l'endroit : la **Rue Henry Monnier**.
+> **Statut : non résolu pendant le CTF.**  
+> Notes conservées pour documenter les pistes explorées et le point de blocage.
 
-[Musée de la Résistance Nationale à Champigny](https://www.musee-resistance.com/expositions-doisneau-presentation/)
+La recherche d’image inversée permet d’identifier le photographe, **Robert Doisneau**, ainsi que le lieu de la scène : la **rue Henry-Monnier**, à Paris.
 
-Cycliste lanceur de tracts **rue Henry Monnier**, automne 1944 - printemps 1945  
-Collection AAMRN, musée de la Résistance nationale à Champigny-sur-Marne
-© Atelier **Robert Doisneau**
+**Source :** [Musée de la Résistance nationale à Champigny](https://www.musee-resistance.com/expositions-doisneau-presentation/)
 
-Par acquis de conscience, je fais une rapide vérification sur Google Maps, mais peu de place au doute tant le lieu a peu changé. La pharmacie elle-même est toujours en place.
+Cycliste lanceur de tracts **rue Henry-Monnier**, automne 1944 - printemps 1945. Collection AAMRN, musée de la Résistance nationale à Champigny-sur-Marne, © Atelier Robert Doisneau.
 
-[Google Maps](https://maps.app.goo.gl/egxmC66rYQbeEQ8x8)
+Une vérification sur Google Maps confirme la cohérence du lieu : l’angle de rue et la pharmacie permettent de reconnaître la scène.
+
+**Source :** [Google Maps](https://maps.app.goo.gl/egxmC66rYQbeEQ8x8)
 
 ![3. Rue Henry Monnier](./assets/3-rue-henry-monnier.png)
 
-J'approfondi alors mes recherches sur ce cliché de Robert Doisneau. Au fil des pages, je finis par tomber sur un article qui m'en apprend un peu plus sur les vraies origines de cette photographie.
+En approfondissant l’historique de ce cliché, je trouve une information importante : la photographie n’a pas été prise pendant l’Occupation, mais après la Libération de Paris. Elle appartient à une série mise en scène par Doisneau pour documenter la fabrication et la diffusion de la presse clandestine.
 
-[Ecoute 2024, N°1, page 24](https://fr.scribd.com/document/924855841/ecoute-2024-no-01)
+**Source :** [Ecoute 2024, n°1, p. 24](https://fr.scribd.com/document/924855841/ecoute-2024-no-01)
 
-Sur la photo présente, on aperçoit un cycliste qui lance en l’air des tracts clandestins appelant la population à la résistance. Comment Doisneau a-t-il pu prendre une telle photo ? Savait-il qu’un lancer de tracts aurait lieu sous ses fenêtres ce jour-là ? 
-En vérité, cette photo ne fut pas prise sous l’Occupation. Prendre un tel cliché aurait été trop dangereux. Cette photo a été prise après la libération de Paris. La revue littéraire Le Point, publiée de 1936 à 1962, charge alors Doisneau de rendre hommage à ceux qui, sous l’Occupation, ont participé à la diffusion de la presse clandestine [...]. 
-**Cette photo est une pure mise en scène**. Nous sommes à Paris, dans le 9 e arrondissement, au croisement des rues Henry-Monnier et Laferrière. Doisneau s’est positionné en hauteur pour avoir une vue d’ensemble.
+Sur la photo, on aperçoit un cycliste lançant des tracts clandestins. L’article précise que l’image est une reconstitution postérieure à la Libération, réalisée au croisement des rues Henry-Monnier et Laferrière.
 
-Effectivement, il s'agit d'une reconstitution post-Libération. Cette image s'inscrit dans un reportage de 48 clichés de Robert Doisneau, initié par Pierre Betz pour la revue _Le Point_ (« **Imprimeries Clandestines** », n°31), visant à mettre en scène le processus de fabrication et de diffusion d'un imprimé clandestin.
+Cette piste renvoie au reportage **Imprimeries clandestines**, publié dans la revue _Le Point_, n°31, en mars 1945.
 
-[Imprimeries Clandestine](https://librairiejumentverte.com/fr/archives/2200-revue-le-point-xxxi-imprimeries-clandestines-mars-1945.html)
+**Source :** [Revue Le Point XXXI — Imprimeries clandestines](https://librairiejumentverte.com/fr/archives/2200-revue-le-point-xxxi-imprimeries-clandestines-mars-1945.html)
 
-Le point: revue artistique et littéraires, XXXI, mars, 1945
-La revue est illustrée de nombreuses reproductions photographiques de Robert Doisneau.
+<img src="./assets/3-imprimeries-clandestines.png" alt="3. Imprimeries Clandestines" width="367">
 
-<img src="./assets/3-imprimeries-clandestines.png" alt="3. Imprimeries Clandestines" width="367"> 
+Le lieu est donc solidement identifié. Le blocage porte sur l’heure de prise de vue : aucune des sources consultées ne donne d’horaire explicite.
 
-Les photographies ont donc bien été prises entre la fin de l'année 1944 et le début 1945. Cependant, aucun horaire n'est mentionné pour cette prise de vue ; il me faudra donc explorer d'autres pistes.
+Tentatives à partir d’une estimation par les ombres :
 
-Et je tourne comme jamais j'ai tourné dans un challenge. Sur plusieurs jours, j'y reviens... Pas la queue d'une piste pour l'heure. Faute de mieux, je me risque à un savant calcul de longueur d'ombre selon la date du 29 octobre 1944... Avec et sans le changement d'heure, c'est peine perdue.
+⛔ **Fail :** `rue_henry_monnier_11`  
+⛔ **Fail :** `rue_henry_monnier_10`
 
-⛔​​ **Fail :** `rue_henry_monnier_11`
-⛔​​ **Fail :** `rue_henry_monnier_10`
-
-J'essaie de me trouver une autre approche. Je creuse le lien entre Doisneau et la date du 29 octobre et fini par trouver un rapprochement :
+Dernière piste explorée : le lien possible entre Doisneau et la date du 29 octobre. Le rapprochement mène au livre **Paris Doisneau**, publié le 29 octobre 2014, sans permettre de résoudre l’heure demandée.
 
 ![3. Paris Doisneau Livre](./assets/3-paris-doisneau-livre.png)
-**Paris Doisneau**, paru le **29 octobre 2014**. Editions Flammarion.
-
