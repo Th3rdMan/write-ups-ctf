@@ -1,6 +1,6 @@
 # L’art de résister
 
-Cette section regroupe les challenges où l’art, la littérature, la musique et les œuvres culturelles servent de points d’entrée à l’investigation.
+Une série de challenges où les œuvres, les textes, la musique et les références culturelles servent de points d’entrée à l’enquête.
 
 | Statut | Challenge | Points |
 |:--:|---|---:|
@@ -12,4 +12,4 @@ Cette section regroupe les challenges où l’art, la littérature, la musique e
 
 ## Ressources
 
-Les fichiers associés à cette section sont disponibles dans [`assets/`](./assets/).
+Les fichiers associés sont regroupés dans [`assets/`](./assets/).
