@@ -12,18 +12,19 @@ Indiquez les coordonnées géographiques de son lieu de décès
 
 Petite recherche sur base du matricule, et il correspond à un numéro de matricule du camp de concentration de **Ravensbrück**. Il a été attribué à **Marie Henriette Rivière** (née Quérois), résistante né à Saint-Gourson, mais travaillant au PTT à **Cognac**.
 
-> [!MHRivière] [Le Maitron](https://maitron.fr/riviere-marie-henriette-dite-paule-nee-querois/)
-> Un convoi partit de Belfort le 1er septembre 1944, des femmes incarcérées à Cottbus furent placées dans ce convoi à destination du camp de concentration de Ravensbrück, elle porta le **matricule 62863**. [...] Très affaiblie par la dysenterie, elle mourut pendant la nuit à l’infirmerie de Ravensbrück le **15 février 1945**.
+[Le Maitron](https://maitron.fr/riviere-marie-henriette-dite-paule-nee-querois/)
+
+Un convoi partit de Belfort le 1er septembre 1944, des femmes incarcérées à Cottbus furent placées dans ce convoi à destination du camp de concentration de Ravensbrück, elle porta le **matricule 62863**. [...] Très affaiblie par la dysenterie, elle mourut pendant la nuit à l’infirmerie de Ravensbrück le **15 février 1945**.
 
 Il ne reste qu'à situer l'infirmerie dans ce camp de concentration.
 
+[Comité International de Ravensbrück](https://www.irk-cir.org/fr/brief_history)
 
-> [!CIR] [Comité International de Ravensbrück](https://www.irk-cir.org/fr/brief_history)
-> L'infirmerie du camp de femmes de Ravensbrück se trouvait à l'endroit au début de la première allée du camp. Elle se composait de deux baraques en forme de H, appelées Revier I. En 1943, plusieurs autres baraques à côté ou en face furent ajoutées comme Revier II réservées aux prisonniers atteints de maladies telles que la tuberculose, la scarlatine, l'angine et la typhoïde.
+L'infirmerie du camp de femmes de Ravensbrück se trouvait à l'endroit au début de la première allée du camp. Elle se composait de deux baraques en forme de H, appelées Revier I. En 1943, plusieurs autres baraques à côté ou en face furent ajoutées comme Revier II réservées aux prisonniers atteints de maladies telles que la tuberculose, la scarlatine, l'angine et la typhoïde.
 
+[Collège Malraux](https://clg-malraux-asnieres.ac-versailles.fr/spip.php?article815)
 
-> [!Plan] [Collège Malraux](https://clg-malraux-asnieres.ac-versailles.fr/spip.php?article815)
-> ![1. Plan du camp](./assets/1-plan-du-camp.png)
+![1. Plan du camp](./assets/1-plan-du-camp.png)
 
 Sur ce plan, l'infirmerie est donc au niveau du numéro 7. Je reporte l'emplacement sur Google Maps pour trouver la localisation : **53.191590, 13.165511**.
 
