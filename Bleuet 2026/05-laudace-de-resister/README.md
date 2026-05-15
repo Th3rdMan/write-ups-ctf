@@ -1,6 +1,6 @@
 # L’audace de résister
 
-Cette section regroupe des challenges demandant de suivre des traces plus indirectes : alias, indices fragmentaires, documents détournés et recoupements progressifs.
+Alias, traces indirectes, documents fragmentaires et pivots de recherche : cette section demande surtout de tenir un raisonnement propre malgré des indices incomplets.
 
 | Statut | Challenge | Points |
 |:--:|---|---:|
@@ -10,8 +10,4 @@ Cette section regroupe des challenges demandant de suivre des traces plus indire
 
 ## Ressources
 
-Les fichiers associés à cette section sont disponibles dans [`assets/`](./assets/).
-
-## Note
-
-Le challenge marqué ❌ n’a pas été résolu pendant le CTF. Le fichier est conservé comme trace de recherche, pas comme solution validée.
+Les fichiers associés sont regroupés dans [`assets/`](./assets/).
