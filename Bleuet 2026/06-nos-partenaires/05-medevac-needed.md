@@ -13,8 +13,8 @@ Voici un Nine Line intercepté. **Décodez-le des lignes 3 à 4**.
 
 Plusieurs sources en ligne permettent de traduire les différentes lignes du protocole "9-Line MEDEVAC", avec quelques variations observées cependant, la ligne 3 allant d'Alpha à Charlie sur certaines sources, et jusqu'à Delta sur d'autres. Je prends le parti de suivre un manuel d'infanterie : 
 
-> [!9-Line] [Manuel d'Emploi de La Section d'Infanterie (page 45)](https://www.scribd.com/document/1026226737/At-04-01-FEB17-Manuel-d-Emploi-de-La-Section-d-Infanterie)
-> ![5. Manuel 9-Line](./assets/5-manuel-9-line.png)
+[Manuel d'Emploi de La Section d'Infanterie (page 45)](https://www.scribd.com/document/1026226737/At-04-01-FEB17-Manuel-d-Emploi-de-La-Section-d-Infanterie)
 
+![5. Manuel 9-Line](./assets/5-manuel-9-line.png)
 
 ✅ **Réponse :** `urgent_prioritaire_treuil`
