@@ -16,7 +16,7 @@ Une recherche d'image inversée permet de retrouver cette carte postale comme il
 
 **Source :** [Wikipedia — Gare de Laluque](https://fr.wikipedia.org/wiki/Gare_de_Laluque)
 
-Le 27 juillet 1944, **Henri Ferrand**, membre du groupe de résistance **L'Armée secrète de Pontonx**, réalise le sabotage d’un train de munitions allemand en gare de Laluque.
+> *Le 27 juillet 1944, **Henri Ferrand**, membre du groupe de résistance **L'Armée secrète de Pontonx**, réalise le sabotage d’un train de munitions allemand en gare de Laluque.*
 
 Le nom d’Henri Ferrand produit plusieurs homonymes, mais les archives des Landes permettent de retrouver le bon dossier.
 
