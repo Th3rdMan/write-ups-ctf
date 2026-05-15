@@ -1,6 +1,6 @@
 # Dans la peau d’un résistant
 
-Cette section regroupe les challenges liés aux transmissions clandestines, messages codés, indices historiques et recherches de terrain autour de la Résistance.
+Transmissions clandestines, messages chiffrés, archives, indices de terrain : cette section concentre une bonne partie du travail de recoupement historique et OSINT du CTF.
 
 | Statut | Challenge | Points |
 |:--:|---|---:|
@@ -14,8 +14,4 @@ Cette section regroupe les challenges liés aux transmissions clandestines, mess
 
 ## Ressources
 
-Les fichiers associés à cette section sont disponibles dans [`assets/`](./assets/).
-
-## Note
-
-Le challenge marqué ❌ n’a pas été résolu pendant le CTF. Le fichier est conservé comme trace de recherche, pas comme solution validée.
+Les fichiers associés sont regroupés dans [`assets/`](./assets/).
