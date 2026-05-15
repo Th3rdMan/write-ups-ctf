@@ -12,8 +12,9 @@ Après avoir retrouvé le **premier slogan que l’on pouvait voir sur le site 
 
 Je pars donc sur le site du Bleuet de France, et plus spécifiquement l'onglet "Notre histoire".
 
-> [!Une fleur dans la guerre] [Une fleur dans la guerre](https://www.bleuetdefrance.fr/notre-histoire/une-fleur-dans-la-guerre-1916-1938/)
-> À l’origine de cette initiative, deux femmes : **Suzanne Lenhardt**, infirmière à l’Institution nationale des Invalides, et **Charlotte Malleterre**, fille du Général Niox et épouse du Général Malleterre.
+[Une fleur dans la guerre](https://www.bleuetdefrance.fr/notre-histoire/une-fleur-dans-la-guerre-1916-1938/)
+
+À l’origine de cette initiative, deux femmes : **Suzanne Lenhardt**, infirmière à l’Institution nationale des Invalides, et **Charlotte Malleterre**, fille du Général Niox et épouse du Général Malleterre.
 
 Plus bas sur cette page, la ligne du temps indique, à la date du 6 mars 1935 :
 
@@ -25,7 +26,8 @@ Et l'on y trouve le document officiel en question, confirmant la signature :
 
 Ensuite, je fais un petit tour sur la WaybackMachine, la date la plus ancienne pour l'archive du site remonte à 2008. On y voit le slogan suivant :
 
-> [!NOTE] [WaybackMachine](https://web.archive.org/web/20081105114857/http://www.bleuetdefrance.fr/)
-> ![4. Slogan](./assets/4-slogan.png)
+[WaybackMachine](https://web.archive.org/web/20081105114857/http://www.bleuetdefrance.fr/)
+
+![4. Slogan](./assets/4-slogan.png)
 
 ✅ **Réponse :** `la_memoire_se_transmet_l_espoir_se_donne_Suzanne_Lenhardt`
