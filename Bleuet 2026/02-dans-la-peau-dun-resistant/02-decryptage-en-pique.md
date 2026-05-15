@@ -14,7 +14,7 @@ Retrouvez le lieu et la date du début de ces faits.
 
 Une information utile en fin de vidéo indique une vidéo de l'ECPAD. Un petite recherche sur le site ne me permet pas de trouver la vidéo de premier abord. Je cherche alors à trouver une image reconnaissable à extraire de la vidéo. Je choisi la prise de vue du pont démoli et tombe sur la même vidéo, hébergée sur Youtube.
 
-> [!Youtube] [YouTube](https://www.youtube.com/watch?v=XnZq98Mx4E0)
+> [YouTube](https://www.youtube.com/watch?v=XnZq98Mx4E0)
 > ![2. YouTube](./assets/2-youtube.png)
 > *Bombardement de Brest pendant la Seconde Guerre mondiale*
 
@@ -22,7 +22,7 @@ En cherchant un peu, je confirme qu'il s'agit bien du pont National, un pont tou
 
 Reste à compléter l'information, petit tour sur Wikipedia pour avoir la date de début du siège de Brest en 1944 :
 
-> [!Bataille de Brest] [Wikipedia](https://fr.wikipedia.org/wiki/Bataille_de_Brest_(1944))
+> [Wikipedia](https://fr.wikipedia.org/wiki/Bataille_de_Brest_(1944))
 > ![2. Bataille de Brest](./assets/2-bataille-de-brest.png)
 
 ✅ **Réponse :** `07/08/1944_brest`
