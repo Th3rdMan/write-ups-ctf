@@ -6,15 +6,15 @@ Le CTF était orienté OSINT, mémoire historique, Résistance, investigation do
 
 ## Résultat personnel
 
-| Équipe | Joueur | Score final | Challenges résolus | Taux de résolution |
+| Équipe | Pseudo | Score final | Challenges validés | Taux de validation |
 |---|---|---:|---:|---:|
 | Heroes 4 Hire | Th3rD | 805 pts | 23 / 36 | 63,89 % |
 
 Sur ce CTF, j’ai validé **23 challenges** pour un total de **805 points**. La progression s’est construite régulièrement du 8 au 15 mai, avec une accélération nette sur les derniers jours, notamment sur la catégorie **Dans la peau d’un résistant**.
 
-## Répartition des résolutions
+## Répartition des validations
 
-| Catégorie | Challenges résolus | Part des solves |
+| Catégorie | Challenges validés | Part des validations |
 |---|---:|---:|
 | Dans la peau d’un résistant | 6 | 26,09 % |
 | L’art de résister | 5 | 21,74 % |
