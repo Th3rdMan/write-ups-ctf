@@ -1,6 +1,6 @@
 # Nos partenaires
 
-Cette section regroupe les challenges proposés autour des partenaires du CTF. Les épreuves sont plus courtes, mais elles mobilisent tout de même les réflexes classiques de l’OSINT : identification, vérification, recherche ciblée et exploitation d’indices publics.
+Challenges courts proposés autour des partenaires du CTF. Format plus direct, mais même exigence de vérification : identifier, croiser, confirmer.
 
 | Statut | Challenge | Points |
 |:--:|---|---:|
@@ -12,4 +12,4 @@ Cette section regroupe les challenges proposés autour des partenaires du CTF. L
 
 ## Ressources
 
-Les fichiers associés à cette section sont disponibles dans [`assets/`](./assets/).
+Les fichiers associés sont regroupés dans [`assets/`](./assets/).
