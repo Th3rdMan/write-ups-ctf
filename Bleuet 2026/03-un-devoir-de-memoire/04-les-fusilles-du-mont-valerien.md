@@ -23,7 +23,7 @@ Le sous-officier allemand est **Clemens Rüther**. Les résistants ont été ide
 
 **Source :** [Fondation de la Résistance](https://www.fondationresistance.org/recherche-et-documentation/ressources/photographie/photographie-liinexy-cution-mont-valy-rien-membres-groupe-manouchian-photo15/)
 
-Les condamnés photographiés y sont indiqués comme étant **Celestino Alfonso**, **Wolf Josef Boczor**, **Emeric Glasz** et **Marcel Rajman**.
+> *Les condamnés photographiés y sont indiqués comme étant **Celestino Alfonso**, **Wolf Josef Boczor**, **Emeric Glasz** et **Marcel Rajman**.*
 
 Le site de l’**ECPAD** donne une variante orthographique : **Joseph Boczow** au lieu de **Boczor**. Je conserve toutefois la version de Serge Klarsfeld, cohérente avec la source précédente et avec le flag attendu.
 
