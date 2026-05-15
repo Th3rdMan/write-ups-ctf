@@ -1,0 +1,124 @@
+[
+  {
+    "chapter": "Prologue",
+    "folder": "01-prologue",
+    "markdown_files": 1,
+    "assets": 2,
+    "asset_mapping": {
+      "Bienvenue - Réponse.png": "bienvenue-reponse.png",
+      "Bienvenue.png": "bienvenue.png"
+    }
+  },
+  {
+    "chapter": "Dans la peau d'un resistant",
+    "folder": "02-dans-la-peau-dun-resistant",
+    "markdown_files": 7,
+    "assets": 23,
+    "asset_mapping": {
+      "1. Alpha ici Bravo.png": "1-alpha-ici-bravo.png",
+      "1. Audio.wav": "1-audio.wav",
+      "1. Grand Morgon.png": "1-grand-morgon.png",
+      "1. Ligne Veynes-Embrun.png": "1-ligne-veynes-embrun.png",
+      "1. Veynes-Briançon.png": "1-veynes-briancon.png",
+      "2. Bataille de Brest.png": "2-bataille-de-brest.png",
+      "2. Décryptage en piqué.png": "2-decryptage-en-pique.png",
+      "2. Vidéo.mp4": "2-video.mp4",
+      "2. YouTube.png": "2-youtube.png",
+      "3. Lettre d'un soldat.png": "3-lettre-dun-soldat.png",
+      "3. Lettre ouverte.png": "3-lettre-ouverte.png",
+      "3. Manuscrits De Gaulle.png": "3-manuscrits-de-gaulle.png",
+      "3. Portrait.png": "3-portrait.png",
+      "3. Tract.png": "3-tract.png",
+      "4. Code source complet.php": "4-code-source-complet.php",
+      "4. Dossier Ferrand.png": "4-dossier-ferrand.png",
+      "4. Photo.png": "4-photo.png",
+      "4. Plastique et crayons.png": "4-plastique-et-crayons.png",
+      "5. Code source.png": "5-code-source.png",
+      "5. Interception de code.png": "5-interception-de-code.png",
+      "6. Logo CDLL.png": "6-logo-cdll.png",
+      "6. Stereogram.png": "6-stereogram.png",
+      "7. Plaque commémorative.png": "7-plaque-commemorative.png"
+    }
+  },
+  {
+    "chapter": "Un devoir de memoire",
+    "folder": "03-un-devoir-de-memoire",
+    "markdown_files": 5,
+    "assets": 16,
+    "asset_mapping": {
+      "1. GMaps.png": "1-gmaps.png",
+      "1. Plan du camp.png": "1-plan-du-camp.png",
+      "1. Plus qu'un numéro.png": "1-plus-quun-numero.png",
+      "2. L'équipage.png": "2-lequipage.png",
+      "2. Photograghie.png": "2-photograghie.png",
+      "2. Stapels crew.pdf": "2-stapels-crew.pdf",
+      "3. CNRD 1.png": "3-cnrd-1.png",
+      "3. CNRD 2.png": "3-cnrd-2.png",
+      "3. CNRD Carte.png": "3-cnrd-carte.png",
+      "3. La Charente libérée.png": "3-la-charente-liberee.png",
+      "4. Les fusillés du Mont-Valérien.png": "4-les-fusilles-du-mont-valerien.png",
+      "4. Photo execution.png": "4-photo-execution.png",
+      "4. WaybackMachine.png": "4-waybackmachine.png",
+      "5. Annuaire Princesse.png": "5-annuaire-princesse.png",
+      "5. Eléonore Chedeville.png": "5-eleonore-chedeville.png",
+      "5. La princesse.png": "5-la-princesse.png"
+    }
+  },
+  {
+    "chapter": "L'art de resister",
+    "folder": "04-lart-de-resister",
+    "markdown_files": 5,
+    "assets": 12,
+    "asset_mapping": {
+      "1. Article.png": "1-article.png",
+      "1. Eglise de Beauregard.png": "1-eglise-de-beauregard.png",
+      "1. Résistant dans l'art.png": "1-resistant-dans-lart.png",
+      "2. 5e attaque.png": "2-5e-attaque.png",
+      "2. Menu.png": "2-menu.png",
+      "2. Une oreille pour se souvenir.png": "2-une-oreille-pour-se-souvenir.png",
+      "3. Cassette abimee.mp3": "3-cassette-abimee.mp3",
+      "3. Des mots pour contrer les maux.png": "3-des-mots-pour-contrer-les-maux.png",
+      "3. Verlaine chanté par Ferré.png": "3-verlaine-chante-par-ferre.png",
+      "4. Un vers pour la liberté.png": "4-un-vers-pour-la-liberte.png",
+      "5. L'art et la résistance.png": "5-lart-et-la-resistance.png",
+      "5. Peinture.png": "5-peinture.png"
+    }
+  },
+  {
+    "chapter": "L'audace de resister",
+    "folder": "05-laudace-de-resister",
+    "markdown_files": 3,
+    "assets": 9,
+    "asset_mapping": {
+      "1. Alias et acide.png": "1-alias-et-acide.png",
+      "2. Avis Donald.png": "2-avis-donald.png",
+      "2. Le glacier tenace.png": "2-le-glacier-tenace.png",
+      "2. Monument des Glières.png": "2-monument-des-glieres.png",
+      "3. Imprimeries Clandestines.png": "3-imprimeries-clandestines.png",
+      "3. Le tract dissident.png": "3-le-tract-dissident.png",
+      "3. Paris Doisneau Livre.png": "3-paris-doisneau-livre.png",
+      "3. Photographie.png": "3-photographie.png",
+      "3. Rue Henry Monnier.png": "3-rue-henry-monnier.png"
+    }
+  },
+  {
+    "chapter": "Nos partenaires",
+    "folder": "06-nos-partenaires",
+    "markdown_files": 5,
+    "assets": 12,
+    "asset_mapping": {
+      "2. Château des Fouzes.png": "2-chateau-des-fouzes.png",
+      "2. Le refuge des déchiffreurs.png": "2-le-refuge-des-dechiffreurs.png",
+      "2. Photo Satellite.png": "2-photo-satellite.png",
+      "2. Plaque.png": "2-plaque.png",
+      "3. L'ingénieur de l'ombre.png": "3-lingenieur-de-lombre.png",
+      "4. L'éclosion du souvenir.png": "4-leclosion-du-souvenir.png",
+      "4. Ligne du temps.png": "4-ligne-du-temps.png",
+      "4. Signature.png": "4-signature.png",
+      "4. Slogan.png": "4-slogan.png",
+      "5. MEDEVAC NEEDED.png": "5-medevac-needed.png",
+      "5. MEDEVAC.png": "5-medevac.png",
+      "5. Manuel 9-Line.png": "5-manuel-9-line.png"
+    }
+  }
+]
