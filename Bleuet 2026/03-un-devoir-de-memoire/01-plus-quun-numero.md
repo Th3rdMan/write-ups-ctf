@@ -14,13 +14,13 @@ Une recherche à partir du matricule permet de l’associer au camp de concentra
 
 **Source :** [Le Maitron — Marie Henriette Rivière](https://maitron.fr/riviere-marie-henriette-dite-paule-nee-querois/)
 
-Un convoi partit de Belfort le 1er septembre 1944, des femmes incarcérées à Cottbus furent placées dans ce convoi à destination du camp de concentration de Ravensbrück, elle porta le **matricule 62863**. [...] Très affaiblie par la dysenterie, elle mourut pendant la nuit à l’infirmerie de Ravensbrück le **15 février 1945**.
+> *Un convoi partit de Belfort le 1er septembre 1944, des femmes incarcérées à Cottbus furent placées dans ce convoi à destination du camp de concentration de Ravensbrück, elle porta le **matricule 62863**. [...] Très affaiblie par la dysenterie, elle mourut pendant la nuit à l’infirmerie de Ravensbrück le **15 février 1945**.*
 
 Il reste donc à situer l’infirmerie du camp.
 
 **Source :** [Comité International de Ravensbrück](https://www.irk-cir.org/fr/brief_history)
 
-L'infirmerie du camp de femmes de Ravensbrück se trouvait à l'endroit au début de la première allée du camp. Elle se composait de deux baraques en forme de H, appelées Revier I. En 1943, plusieurs autres baraques à côté ou en face furent ajoutées comme Revier II réservées aux prisonniers atteints de maladies telles que la tuberculose, la scarlatine, l'angine et la typhoïde.
+> *L'infirmerie du camp de femmes de Ravensbrück se trouvait à l'endroit au début de la première allée du camp. Elle se composait de deux baraques en forme de H, appelées Revier I. En 1943, plusieurs autres baraques à côté ou en face furent ajoutées comme Revier II réservées aux prisonniers atteints de maladies telles que la tuberculose, la scarlatine, l'angine et la typhoïde.*
 
 **Source :** [Collège Malraux — plan du camp](https://clg-malraux-asnieres.ac-versailles.fr/spip.php?article815)
 
