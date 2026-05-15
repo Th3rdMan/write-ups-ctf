@@ -1,22 +1,20 @@
 # Write-ups CTF
 
-Dépôt personnel regroupant mes write-ups de CTF, avec une attention particulière portée à la démarche, aux sources utilisées et au raisonnement.
+Archives personnelles de write-ups CTF.
 
-L’objectif n’est pas seulement de donner un flag : chaque write-up doit permettre à un lecteur extérieur de comprendre comment la solution a été construite, quelles pistes ont été explorées et, quand c’est utile, pourquoi certaines pistes ont été abandonnées.
+Chaque dossier privilégie la démarche : hypothèses, recherches, sources, recoupements, erreurs utiles et cheminement vers la validation. L’idée n’est pas de publier une simple collection de flags, mais de conserver des résolutions lisibles, vérifiables et réutilisables.
 
-## CTF disponibles
+## Événements documentés
 
-| CTF | Thème principal | Statut | Accès |
+| CTF | Domaine | Bilan | Accès |
 |---|---|---:|---|
-| Bleuet 2026 | OSINT, mémoire, Résistance, histoire | 23 challenges résolus | [Lire les write-ups](./Bleuet%202026/) |
+| Bleuet de France V5 — 2026 | OSINT, histoire, mémoire | 805 pts · 23 validations | [Ouvrir](./Bleuet%202026/) |
 
-## Convention de lecture
+## Statuts
 
-| Statut | Signification |
+| Statut | Sens |
 |:--:|---|
-| ✅ | Challenge résolu et documenté |
-| ❌ | Challenge non résolu, conservé comme trace de recherche |
+| ✅ | Challenge validé pendant le CTF |
+| ❌ | Piste non aboutie, conservée pour la démarche |
 
-## Remarque
-
-Les write-ups sont publiés après la fin des événements concernés. Ils contiennent donc des spoilers complets sur les challenges documentés.
+Les write-ups sont publiés après la fin des événements concernés. Ils contiennent des spoilers.
