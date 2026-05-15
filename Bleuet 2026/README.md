@@ -6,9 +6,24 @@ Le CTF était orienté OSINT, mémoire historique, Résistance, investigation do
 
 ## Résultat personnel
 
-| Équipe | Joueur | Score | Challenges résolus |
-|---|---|---:|---:|
-| Heroes 4 Hire | Th3rD | 805 pts | 23 |
+| Équipe | Joueur | Score final | Challenges résolus | Taux de résolution |
+|---|---|---:|---:|---:|
+| Heroes 4 Hire | Th3rD | 805 pts | 23 / 36 | 63,89 % |
+
+Sur ce CTF, j’ai validé **23 challenges** pour un total de **805 points**. La progression s’est construite régulièrement du 8 au 15 mai, avec une accélération nette sur les derniers jours, notamment sur la catégorie **Dans la peau d’un résistant**.
+
+## Répartition des résolutions
+
+| Catégorie | Challenges résolus | Part des solves |
+|---|---:|---:|
+| Dans la peau d’un résistant | 6 | 26,09 % |
+| L’art de résister | 5 | 21,74 % |
+| Nos partenaires | 5 | 21,74 % |
+| Un devoir de mémoire | 4 | 17,39 % |
+| L’audace de résister | 2 | 8,69 % |
+| Prologue | 1 | 4,35 % |
+
+Le résultat reflète un profil assez homogène sur les catégories OSINT, avec une meilleure réussite sur les challenges liés aux transmissions, recherches historiques et recoupements documentaires. Les challenges non résolus sont conservés lorsqu’ils contiennent une démarche ou des pistes utiles, mais ils ne sont pas présentés comme des solutions validées.
 
 ## Progression
 
@@ -16,8 +31,6 @@ Le CTF était orienté OSINT, mémoire historique, Résistance, investigation do
 |:--:|---|
 | ✅ | Challenge résolu et documenté |
 | ❌ | Challenge non résolu pendant le CTF |
-
-Les challenges non résolus sont conservés dans le dépôt lorsqu’un début de recherche ou des pistes utiles existent. Ils ne sont pas présentés comme des solutions.
 
 ## Sommaire
 
