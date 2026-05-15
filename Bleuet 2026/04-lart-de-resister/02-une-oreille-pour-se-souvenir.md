@@ -12,14 +12,16 @@ De quel restaurant s'agit-il ?
 
 Petite vérification rapide de l'adresse de La Belle Équipe via google, confirmée par Wikipedia :
 
-> [!Attentats] [Wikipedia](https://fr.wikipedia.org/wiki/Attentats_du_13_novembre_2015_en_France)
+[Wikipedia](https://fr.wikipedia.org/wiki/Attentats_du_13_novembre_2015_en_France)
+
 ![2. 5e attaque](./assets/2-5e-attaque.png)
 
 Il ne reste qu'à parcourir les différents restaurants dans un rayon de 150m. L'un d'eux se nomme "**Automne**", et j'y vois un lien direct avec le poème de Verlaine ayant servi de code pour le débarquement de Normandie : *Les sanglots longs des violons de l’automne*...
 
 Son site internet confirme l'existence d'un menu découverte en 5 étapes.
 
-> [!Menu] [Menu Automne](https://www.automne-akishige.com/menu/)
-> ![2. Menu](./assets/2-menu.png)
+[Menu Automne](https://www.automne-akishige.com/menu/)
+
+![2. Menu](./assets/2-menu.png)
 
 ✅ **Réponse :** `Automne`
