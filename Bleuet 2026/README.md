@@ -14,12 +14,12 @@ L’événement mêlait OSINT, histoire contemporaine, mémoire de la Résistanc
 
 | Catégorie | Validés | Non résolus documentés | Points validés | Axes dominants |
 |---|---:|---:|---:|---|
-| Dans la peau d’un résistant | 6 | 1 | 325 | GEOINT, audio/vidéo OSINT, crypto, stéganographie |
-| Un devoir de mémoire | 4 | 1 | 175 | Archives ouvertes, IMINT, résolution d’identité |
-| L’art de résister | 5 | 0 | 150 | IMINT, audio OSINT, recherche culturelle |
-| L’audace de résister | 2 | 1 | 75 | SOCMINT, GEOINT, chronolocation |
-| Nos partenaires | 5 | 0 | 70 | GEOINT, web archives, protocoles, recherche institutionnelle |
-| Prologue | 1 | 0 | 10 | Information retrieval |
+| Dans la peau d’un résistant | 6 | 1 | 325 | GEOINT, Audio OSINT, IMINT, cryptanalyse, stéganographie |
+| Un devoir de mémoire | 4 | 1 | 175 | OSINT documentaire, archives ouvertes, IMINT, recherche d’identité |
+| L’art de résister | 5 | 0 | 150 | Recherche culturelle, GEOINT, Audio OSINT, IMINT |
+| L’audace de résister | 2 | 1 | 75 | SOCMINT, GEOINT, IMINT, chronolocation |
+| Nos partenaires | 5 | 0 | 70 | GEOINT, web archives, cryptanalyse, OSINT institutionnel |
+| Prologue | 1 | 0 | 10 | Recherche documentaire |
 
 Les axes indiqués correspondent à la méthode dominante de résolution. Plusieurs challenges combinent naturellement plusieurs familles d’OSINT.
 
