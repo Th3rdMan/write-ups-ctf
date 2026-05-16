@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 permissions:
   contents: read
   pages: write
@@ -17,7 +20,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout write-ups
         uses: actions/checkout@v4
@@ -28,7 +31,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
 
       - name: Clone Quartz
         run: git clone --depth 1 --branch v4 https://github.com/jackyzha0/quartz.git quartz
@@ -64,7 +67,6 @@ jobs:
           text = text.replace('pageTitle: "Quartz 4"', 'pageTitle: "Th3rD — Write-ups CTF"')
           text = text.replace('locale: "en-US"', 'locale: "fr-FR"')
           text = text.replace('baseUrl: "quartz.jzhao.xyz"', 'baseUrl: "Th3rdMan.github.io/write-ups-ctf"')
-          text = text.replace('defaultDateType: "modified"', 'defaultDateType: "modified"')
           cfg.write_text(text)
           PY
 
@@ -85,7 +87,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
