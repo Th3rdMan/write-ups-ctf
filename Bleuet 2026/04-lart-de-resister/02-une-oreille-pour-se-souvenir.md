@@ -6,21 +6,21 @@
 
 De quel restaurant s'agit-il ?
 
-**Format de flag** : Nomdurestaurant
+**Format du flag** : `Nomdurestaurant`
 
 ---
 
-Petite vérification rapide de l'adresse de La Belle Équipe via google, confirmée par Wikipedia :
+Je commence par vérifier l’adresse de **La Belle Équipe**, point de départ géographique du challenge.
 
-[Wikipedia](https://fr.wikipedia.org/wiki/Attentats_du_13_novembre_2015_en_France)
+**Source :** [Wikipedia — Attentats du 13 novembre 2015 en France](https://fr.wikipedia.org/wiki/Attentats_du_13_novembre_2015_en_France)
 
 ![2. 5e attaque](./assets/2-5e-attaque.png)
 
-Il ne reste qu'à parcourir les différents restaurants dans un rayon de 150m. L'un d'eux se nomme "**Automne**", et j'y vois un lien direct avec le poème de Verlaine ayant servi de code pour le débarquement de Normandie : *Les sanglots longs des violons de l’automne*...
+La recherche porte ensuite sur les restaurants situés dans un rayon d’environ 150 mètres. L’un d’eux se nomme **Automne**, référence directe au poème de Verlaine utilisé comme code dans le contexte du débarquement de Normandie.
 
-Son site internet confirme l'existence d'un menu découverte en 5 étapes.
+Le site du restaurant confirme l’existence d’un menu découverte en cinq étapes.
 
-[Menu Automne](https://www.automne-akishige.com/menu/)
+**Source :** [Restaurant Automne — menu](https://www.automne-akishige.com/menu/)
 
 ![2. Menu](./assets/2-menu.png)
 
