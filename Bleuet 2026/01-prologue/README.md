@@ -4,7 +4,7 @@ Point d’entrée du CTF et validation initiale de la plateforme.
 
 | Statut | Challenge | Points | Axe OSINT |
 |:--:|---|---:|---|
-| ✅ | [Bienvenue](./bienvenue.md) | 10 | Information retrieval |
+| ✅ | [Bienvenue](./bienvenue.md) | 10 | Recherche documentaire |
 
 ## Ressources
 
