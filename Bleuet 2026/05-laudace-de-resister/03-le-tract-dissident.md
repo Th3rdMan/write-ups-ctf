@@ -22,7 +22,7 @@ La recherche d’image inversée permet d’identifier le photographe, **Robert 
 
 **Source :** [Musée de la Résistance nationale à Champigny](https://www.musee-resistance.com/expositions-doisneau-presentation/)
 
-Cycliste lanceur de tracts **rue Henry-Monnier**, automne 1944 - printemps 1945. Collection AAMRN, musée de la Résistance nationale à Champigny-sur-Marne, © Atelier Robert Doisneau.
+> *Cycliste lanceur de tracts **rue Henry-Monnier**, automne 1944 - printemps 1945. Collection AAMRN, musée de la Résistance nationale à Champigny-sur-Marne, © Atelier Robert Doisneau.*
 
 Une vérification sur Google Maps confirme la cohérence du lieu : l’angle de rue et la pharmacie permettent de reconnaître la scène.
 
@@ -34,7 +34,7 @@ En approfondissant l’historique de ce cliché, je trouve une information impor
 
 **Source :** [Ecoute 2024, n°1, p. 24](https://fr.scribd.com/document/924855841/ecoute-2024-no-01)
 
-Sur la photo, on aperçoit un cycliste lançant des tracts clandestins. L’article précise que l’image est une reconstitution postérieure à la Libération, réalisée au croisement des rues Henry-Monnier et Laferrière.
+> *Sur la photo, on aperçoit un cycliste lançant des tracts clandestins. L’article précise que l’image est une reconstitution postérieure à la Libération, réalisée au croisement des rues Henry-Monnier et Laferrière.*
 
 Cette piste renvoie au reportage **Imprimeries clandestines**, publié dans la revue _Le Point_, n°31, en mars 1945.
 
