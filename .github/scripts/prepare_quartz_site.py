@@ -65,6 +65,13 @@ def configure_quartz() -> None:
     text = text.replace('pageTitle: "Quartz 4"', f'pageTitle: "{PAGE_TITLE}"')
     text = text.replace('locale: "en-US"', 'locale: "fr-FR"')
     text = text.replace('baseUrl: "quartz.jzhao.xyz"', f'baseUrl: "{BASE_URL}"')
+    # Quartz's default "shortest" link resolution rewrites local image paths such as
+    # ./assets/image.png to ../../assets/image.png on nested pages. Keep relative paths
+    # so images, audio, video, and PDFs stay next to their write-up assets.
+    text = text.replace(
+        'Plugin.CrawlLinks({ markdownLinkResolution: "shortest" })',
+        'Plugin.CrawlLinks({ markdownLinkResolution: "relative" })',
+    )
     cfg.write_text(text, encoding='utf-8')
 
 
