@@ -116,7 +116,6 @@ jobs:
           def enc(path: str) -> str:
               return "/".join(quote(part) for part in path.split("/"))
 
-          # Build direct link replacements from original GitHub paths to final Quartz paths.
           direct_link_renames = {
               "index-osint.md": "Index OSINT.md",
               "Bleuet 2026/01-prologue/bienvenue.md": "Bleuet 2026/01 - Prologue/01 - Bienvenue.md",
@@ -147,6 +146,42 @@ jobs:
               "Bleuet 2026/06-nos-partenaires/05-medevac-needed.md": "Bleuet 2026/06 - Nos partenaires/05 - MEDEVAC NEEDED.md",
           }
 
+          page_titles = {
+              "Bleuet 2026/index.md": "Bleuet de France V5 — 2026",
+              "Bleuet 2026/01 - Prologue/index.md": "01 - Prologue",
+              "Bleuet 2026/02 - Dans la peau d’un résistant/index.md": "02 - Dans la peau d’un résistant",
+              "Bleuet 2026/03 - Un devoir de mémoire/index.md": "03 - Un devoir de mémoire",
+              "Bleuet 2026/04 - L’art de résister/index.md": "04 - L’art de résister",
+              "Bleuet 2026/05 - L’audace de résister/index.md": "05 - L’audace de résister",
+              "Bleuet 2026/06 - Nos partenaires/index.md": "06 - Nos partenaires",
+              "Bleuet 2026/01 - Prologue/01 - Bienvenue.md": "01 - Bienvenue",
+              "Bleuet 2026/02 - Dans la peau d’un résistant/01 - Alpha ici Bravo.md": "01 - Alpha ici Bravo",
+              "Bleuet 2026/02 - Dans la peau d’un résistant/02 - Décryptage en piqué.md": "02 - Décryptage en piqué",
+              "Bleuet 2026/02 - Dans la peau d’un résistant/03 - Lettre d’un soldat.md": "03 - Lettre d’un soldat",
+              "Bleuet 2026/02 - Dans la peau d’un résistant/04 - Plastique et crayons.md": "04 - Plastique et crayons",
+              "Bleuet 2026/02 - Dans la peau d’un résistant/05 - Interception de code.md": "05 - Interception de code",
+              "Bleuet 2026/02 - Dans la peau d’un résistant/06 - Motif aléatoire.md": "06 - Motif aléatoire",
+              "Bleuet 2026/02 - Dans la peau d’un résistant/07 - Le repère.md": "07 - Le repère",
+              "Bleuet 2026/03 - Un devoir de mémoire/01 - Plus qu’un numéro.md": "01 - Plus qu’un numéro",
+              "Bleuet 2026/03 - Un devoir de mémoire/02 - L’équipage.md": "02 - L’équipage",
+              "Bleuet 2026/03 - Un devoir de mémoire/03 - La Charente libérée.md": "03 - La Charente libérée",
+              "Bleuet 2026/03 - Un devoir de mémoire/04 - Les fusillés du Mont-Valérien.md": "04 - Les fusillés du Mont-Valérien",
+              "Bleuet 2026/03 - Un devoir de mémoire/05 - La princesse.md": "05 - La princesse",
+              "Bleuet 2026/04 - L’art de résister/01 - Résistant dans l’art.md": "01 - Résistant dans l’art",
+              "Bleuet 2026/04 - L’art de résister/02 - Une oreille pour se souvenir.md": "02 - Une oreille pour se souvenir",
+              "Bleuet 2026/04 - L’art de résister/03 - Des mots pour contrer les maux.md": "03 - Des mots pour contrer les maux",
+              "Bleuet 2026/04 - L’art de résister/04 - Un vers pour la liberté.md": "04 - Un vers pour la liberté",
+              "Bleuet 2026/04 - L’art de résister/05 - L’art et la résistance.md": "05 - L’art et la résistance",
+              "Bleuet 2026/05 - L’audace de résister/01 - Alias et acide.md": "01 - Alias et acide",
+              "Bleuet 2026/05 - L’audace de résister/02 - Le glacier tenace.md": "02 - Le glacier tenace",
+              "Bleuet 2026/05 - L’audace de résister/03 - Le tract dissident.md": "03 - Le tract dissident",
+              "Bleuet 2026/06 - Nos partenaires/01 - La force du collectif.md": "01 - La force du collectif",
+              "Bleuet 2026/06 - Nos partenaires/02 - Le refuge des déchiffreurs.md": "02 - Le refuge des déchiffreurs",
+              "Bleuet 2026/06 - Nos partenaires/03 - L’ingénieur de l’ombre.md": "03 - L’ingénieur de l’ombre",
+              "Bleuet 2026/06 - Nos partenaires/04 - L’éclosion du souvenir.md": "04 - L’éclosion du souvenir",
+              "Bleuet 2026/06 - Nos partenaires/05 - MEDEVAC NEEDED.md": "05 - MEDEVAC NEEDED",
+          }
+
           replacements = {}
           for mapping in (direct_link_renames, directory_renames, file_renames):
               for old, new in mapping.items():
@@ -170,6 +205,24 @@ jobs:
                   if src.exists():
                       dst.parent.mkdir(parents=True, exist_ok=True)
                       src.rename(dst)
+
+          def add_or_replace_title(path: Path, title: str):
+              text = path.read_text(encoding="utf-8")
+              if text.startswith("---\n"):
+                  end = text.find("\n---\n", 4)
+                  if end != -1:
+                      body = text[end + 5:]
+                      fm = text[4:end].splitlines()
+                      fm = [line for line in fm if not line.startswith("title:")]
+                      new_fm = [f'title: "{title}"', *fm]
+                      path.write_text("---\n" + "\n".join(new_fm).strip() + "\n---\n\n" + body.lstrip(), encoding="utf-8")
+                      return
+              path.write_text(f'---\ntitle: "{title}"\n---\n\n' + text, encoding="utf-8")
+
+          for rel, title in page_titles.items():
+              path = root / rel
+              if path.exists():
+                  add_or_replace_title(path, title)
           PY
 
       - name: Configure Quartz
