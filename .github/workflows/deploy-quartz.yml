@@ -1,41 +1,36 @@
 name: Deploy Quartz
-
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-  workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: pages
   cancel-in-progress: true
-
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout write-ups
+        uses: actions/checkout@v4
         with:
           path: repo
           fetch-depth: 0
-
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 22
-
       - name: Clone Quartz
         run: git clone --depth 1 --branch v4 https://github.com/jackyzha0/quartz.git quartz
-
       - name: Install Quartz
         working-directory: quartz
         run: npm ci
-
       - name: Prepare content
+        shell: bash
         run: |
           rm -rf quartz/content
           mkdir -p quartz/content
@@ -47,12 +42,11 @@ jobs:
             fi
           done
           find quartz/content -name README.md -delete
-
       - name: Configure Quartz
+        shell: bash
         run: |
-          cat > /tmp/configure_quartz.py <<'PY'
+          python3 <<'PY'
           from pathlib import Path
-
           cfg = Path('quartz/quartz.config.ts')
           text = cfg.read_text(encoding='utf-8')
           text = text.replace('pageTitle: "Quartz 4"', 'pageTitle: "Th3rD — Write-ups CTF"')
@@ -97,7 +91,6 @@ jobs:
             '05-medevac-needed': '05 - MEDEVAC NEEDED',
             'index-osint': 'Index OSINT',
           }
-
           entries = ',\n'.join(f'          "{k}": "{v}"' for k, v in labels.items())
           explorer = '''Component.Explorer({
       title: "Explorateur",
@@ -110,24 +103,27 @@ jobs:
         if (label) node.displayName = label
       },
     })''' % entries
-
           layout = Path('quartz/quartz.layout.ts')
           layout_text = layout.read_text(encoding='utf-8')
           layout_text = layout_text.replace('Component.Explorer(),', explorer + ',')
           layout.write_text(layout_text, encoding='utf-8')
           PY
-          python3 /tmp/configure_quartz.py
-
       - name: Build Quartz
         working-directory: quartz
         run: npx quartz build
-
       - name: Disable Jekyll
         run: touch quartz/public/.nojekyll
-
-      - uses: actions/upload-pages-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: quartz/public
-
-      - uses: actions/deploy-pages@v4
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4
