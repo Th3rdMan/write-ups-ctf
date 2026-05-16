@@ -15,7 +15,7 @@ Le profil décrit mène rapidement à **Jean Moulin** : résistant majeur, amate
 
 **Source :** [jeanmoulin.fr — Galerie Romanin](https://jeanmoulin.fr/GalerieRomanin)
 
-Depuis sa mise en disponibilité, Jean Moulin est officiellement agriculteur à Saint-Andiol. Dès l'été 1942, il a besoin de **justifier de fréquents déplacements dans l'hexagone et cherche à se créer une couverture**. Il ouvre alors, 22 rue de France à Nice, une galerie de tableaux modernes sous son vrai nom.
+> *Depuis sa mise en disponibilité, Jean Moulin est officiellement agriculteur à Saint-Andiol. Dès l'été 1942, il a besoin de **justifier de fréquents déplacements dans l'hexagone et cherche à se créer une couverture**. Il ouvre alors, 22 rue de France à Nice, une galerie de tableaux modernes sous son vrai nom.*
 
 ![1. Article](./assets/1-article.png)
 
@@ -23,7 +23,7 @@ Le nom de la galerie est identifié. Reste à comprendre le bâtiment évoqué p
 
 **Source :** [jeanmoulin.fr — Dernier combat](https://jeanmoulin.fr/DernierCombat)
 
-Du 12 au 14 juin 1943, il quitte Lyon, remonte vers le nord jusqu’au village de Beauregard et y dessine l’église.
+> *Du 12 au 14 juin 1943, il quitte Lyon, remonte vers le nord jusqu’au village de Beauregard et y dessine l’église.*
 
 <img src="./assets/1-eglise-de-beauregard.png" alt="1. Eglise de Beauregard" width="295">
 
