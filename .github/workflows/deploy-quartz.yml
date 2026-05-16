@@ -53,10 +53,16 @@ jobs:
             repo/ quartz/content/
 
           # Quartz uses index.md as the landing page for folders.
-          # Keep README.md for GitHub, but duplicate it as index.md for the generated site.
+          # Keep README.md for GitHub, but only duplicate it when a custom index.md does not already exist.
           find quartz/content -name README.md -print0 | while IFS= read -r -d '' file; do
-            cp "$file" "$(dirname "$file")/index.md"
+            target="$(dirname "$file")/index.md"
+            if [ ! -f "$target" ]; then
+              cp "$file" "$target"
+            fi
           done
+
+          # README.md files are useful on GitHub but redundant in the Quartz explorer once index.md exists.
+          find quartz/content -name README.md -delete
 
       - name: Configure Quartz
         run: |
