@@ -14,6 +14,6 @@ La page consacrée au poème **Chanson d’automne** mentionne son utilisation p
 
 **Source :** [Wikipedia — Chanson d’automne](https://fr.wikipedia.org/wiki/Chanson_d%27automne)
 
-Sa première strophe, légèrement altérée, a été utilisée par Radio Londres au début du mois de juin 1944 pour ordonner aux saboteurs ferroviaires du réseau **VENTRILOQUIST** de Philippe de Vomécourt de faire sauter leurs objectifs.
+> *Sa première strophe, légèrement altérée, a été utilisée par Radio Londres au début du mois de juin 1944 pour ordonner aux saboteurs ferroviaires du réseau **VENTRILOQUIST** de Philippe de Vomécourt de faire sauter leurs objectifs.*
 
 ✅ **Réponse :** `Ventriloquist`
