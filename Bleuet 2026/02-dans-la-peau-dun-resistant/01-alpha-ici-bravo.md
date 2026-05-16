@@ -12,7 +12,7 @@ Votre grand-père s'était donné pour mission de localiser la commune concerné
 
 ---
 
-Première étape : isoler les voix du bruit de la locomotive. J’utilise [Lalal.ai](https://www.lalal.ai/) pour obtenir une voix plus exploitable. Le résultat reste imparfait, mais il permet d’identifier plusieurs noms de gares.
+Première étape : isoler les voix du bruit de la locomotive. [Lalal.ai](https://www.lalal.ai/) permet d’obtenir une voix plus exploitable. Le résultat reste imparfait, mais il permet d’identifier plusieurs noms de gares.
 
 Le train part de **Veynes** en direction de **Briançon**. Depuis la gare d’où le message semble être diffusé, la ligne dessert notamment **Embrun**, **L’Argentière-la-Bessée** et **Prelles**. Cette dernière est fermée depuis 1960, ce qui reste cohérent avec le contexte historique.
 
@@ -20,7 +20,7 @@ Le train part de **Veynes** en direction de **Briançon**. Depuis la gare d’o�
 
 ![1. Veynes-Briançon](./assets/1-veynes-briancon.png)
 
-Je consulte ensuite un plan d’époque de la ligne entre Veynes et Embrun. L’enregistrement ayant vraisemblablement lieu dans une gare de ce tronçon, le champ des communes possibles se réduit.
+Un plan d’époque de la ligne entre Veynes et Embrun permet ensuite de réduire le champ des communes possibles. L’enregistrement semble avoir lieu dans une gare de ce tronçon.
 
 **Source :** [Train Consultant — La Transalpine Livron-Mont-Cenis](https://trainconsultant.com/2024/08/29/la-transalpine-livron-mont-cenis/)
 
@@ -32,16 +32,16 @@ Je consulte ensuite un plan d’époque de la ligne entre Veynes et Embrun. L’
 
 *Grand Morgon, un des lieux de parachutage, non loin de Savines-le-Lac.*
 
-Je mise d’abord sur **Crots**, commune à laquelle est rattaché le Grand Morgon, mais la réponse est refusée.
+Première hypothèse : **Crots**, commune à laquelle est rattaché le Grand Morgon. La réponse est refusée.
 
 ⛔ **Fail :** `Crots`
 
-Je me recentre alors sur les gares et tente plusieurs communes autour de cette hypothèse. Aucun flag ne passe.
+Les tentatives suivantes se concentrent sur les gares et les communes proches de cette hypothèse. Aucun flag ne passe.
 
 ⛔ **Fail :** `Savines`  
 ⛔ **Fail :** `Savineslelac`  
 ⛔ **Fail :** `Prunieres`
 
-Après une pause, je reprends le raisonnement et trouve plusieurs mentions de Morgon parmi les lieux de parachutage, ainsi que du maquis de **Chorges**. Chorges est aussi le lieu suivant sur le plan ferroviaire. La piste est plus solide que mes premiers guesses.
+La reprise du raisonnement fait ressortir plusieurs mentions de Morgon parmi les lieux de parachutage, ainsi que du maquis de **Chorges**. Chorges est aussi le lieu suivant sur le plan ferroviaire. La piste est plus solide que les premiers guesses.
 
 ✅ **Réponse :** `Chorges`
