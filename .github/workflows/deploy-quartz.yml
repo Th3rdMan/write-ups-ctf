@@ -11,6 +11,7 @@ env:
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -23,13 +24,13 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout write-ups
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: repo
           fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24
 
@@ -78,7 +79,7 @@ jobs:
         run: touch quartz/public/.nojekyll
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: quartz/public
 
@@ -91,4 +92,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
