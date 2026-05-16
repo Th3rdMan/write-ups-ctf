@@ -8,7 +8,7 @@ Challenges centrés sur les traces historiques : personnes, unités, lieux, arch
 | ✅ | [L’équipage](./02-lequipage.md) | 25 | Reverse image search · IMINT |
 | ❌ | [La Charente libérée](./03-la-charente-liberee.md) | 50 | Archives ouvertes · recherche historique |
 | ✅ | [Les fusillés du Mont-Valérien](./04-les-fusilles-du-mont-valerien.md) | 50 | Web archives · vérification de sources |
-| ✅ | [La princesse](./05-la-princesse.md) | 75 | Résolution d’identité · recherche documentaire |
+| ✅ | [La princesse](./05-la-princesse.md) | 75 | Recherche d’identité · OSINT documentaire |
 
 ## Ressources
 
