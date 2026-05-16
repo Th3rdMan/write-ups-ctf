@@ -54,18 +54,7 @@ jobs:
           find quartz/content -name README.md -delete
 
       - name: Configure Quartz
-        shell: bash
-        run: |
-          python3 - <<'PY'
-          from pathlib import Path
-
-          cfg = Path('quartz/quartz.config.ts')
-          text = cfg.read_text(encoding='utf-8')
-          text = text.replace('pageTitle: "Quartz 4"', 'pageTitle: "Th3rD — Write-ups CTF"')
-          text = text.replace('locale: "en-US"', 'locale: "fr-FR"')
-          text = text.replace('baseUrl: "quartz.jzhao.xyz"', 'baseUrl: "Th3rdMan.github.io/write-ups-ctf"')
-          cfg.write_text(text, encoding='utf-8')
-          PY
+        run: python3 repo/.github/scripts/prepare_quartz_site.py
 
       - name: Build Quartz
         working-directory: quartz
