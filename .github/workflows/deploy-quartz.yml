@@ -1,16 +1,20 @@
-name: Deploy Quartz
+name: Deploy Quartz site to GitHub Pages
+
 on:
-  workflow_dispatch:
   push:
     branches:
       - main
+  workflow_dispatch: {}
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,103 +24,61 @@ jobs:
         with:
           path: repo
           fetch-depth: 0
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
       - name: Clone Quartz
         run: git clone --depth 1 --branch v4 https://github.com/jackyzha0/quartz.git quartz
-      - name: Install Quartz
+
+      - name: Install Quartz dependencies
         working-directory: quartz
         run: npm ci
-      - name: Prepare content
+
+      - name: Prepare Quartz content
         shell: bash
         run: |
           rm -rf quartz/content
           mkdir -p quartz/content
           rsync -av --exclude='.git' --exclude='.github' --exclude='node_modules' --exclude='.DS_Store' repo/ quartz/content/
+
           find quartz/content -name README.md -print0 | while IFS= read -r -d '' file; do
             target="$(dirname "$file")/index.md"
             if [ ! -f "$target" ]; then
               cp "$file" "$target"
             fi
           done
+
           find quartz/content -name README.md -delete
+
       - name: Configure Quartz
         shell: bash
         run: |
-          python3 <<'PY'
+          python3 - <<'PY'
           from pathlib import Path
+
           cfg = Path('quartz/quartz.config.ts')
           text = cfg.read_text(encoding='utf-8')
           text = text.replace('pageTitle: "Quartz 4"', 'pageTitle: "Th3rD — Write-ups CTF"')
           text = text.replace('locale: "en-US"', 'locale: "fr-FR"')
           text = text.replace('baseUrl: "quartz.jzhao.xyz"', 'baseUrl: "Th3rdMan.github.io/write-ups-ctf"')
           cfg.write_text(text, encoding='utf-8')
-
-          labels = {
-            'Bleuet 2026': 'Bleuet 2026',
-            'bleuet-2026': 'Bleuet 2026',
-            '01-prologue': '01 - Prologue',
-            '02-dans-la-peau-dun-resistant': '02 - Dans la peau d’un résistant',
-            '03-un-devoir-de-memoire': '03 - Un devoir de mémoire',
-            '04-lart-de-resister': '04 - L’art de résister',
-            '05-laudace-de-resister': '05 - L’audace de résister',
-            '06-nos-partenaires': '06 - Nos partenaires',
-            'bienvenue': '01 - Bienvenue',
-            '01-alpha-ici-bravo': '01 - Alpha ici Bravo',
-            '02-decryptage-en-pique': '02 - Décryptage en piqué',
-            '03-lettre-dun-soldat': '03 - Lettre d’un soldat',
-            '04-plastique-et-crayons': '04 - Plastique et crayons',
-            '05-interception-de-code': '05 - Interception de code',
-            '06-motif-aleatoire': '06 - Motif aléatoire',
-            '07-le-repere': '07 - Le repère',
-            '01-plus-quun-numero': '01 - Plus qu’un numéro',
-            '02-lequipage': '02 - L’équipage',
-            '03-la-charente-liberee': '03 - La Charente libérée',
-            '04-les-fusilles-du-mont-valerien': '04 - Les fusillés du Mont-Valérien',
-            '05-la-princesse': '05 - La princesse',
-            '01-resistant-dans-lart': '01 - Résistant dans l’art',
-            '02-une-oreille-pour-se-souvenir': '02 - Une oreille pour se souvenir',
-            '03-des-mots-pour-contrer-les-maux': '03 - Des mots pour contrer les maux',
-            '04-un-vers-pour-la-liberte': '04 - Un vers pour la liberté',
-            '05-lart-et-la-resistance': '05 - L’art et la résistance',
-            '01-alias-et-acide': '01 - Alias et acide',
-            '02-le-glacier-tenace': '02 - Le glacier tenace',
-            '03-le-tract-dissident': '03 - Le tract dissident',
-            '01-la-force-du-collectif': '01 - La force du collectif',
-            '02-le-refuge-des-dechiffreurs': '02 - Le refuge des déchiffreurs',
-            '03-lingenieur-de-lombre': '03 - L’ingénieur de l’ombre',
-            '04-leclosion-du-souvenir': '04 - L’éclosion du souvenir',
-            '05-medevac-needed': '05 - MEDEVAC NEEDED',
-            'index-osint': 'Index OSINT',
-          }
-          entries = ',\n'.join(f'          "{k}": "{v}"' for k, v in labels.items())
-          explorer = '''Component.Explorer({
-      title: "Explorateur",
-      useSavedState: false,
-      mapFn: (node) => {
-        const labels = {
-%s
-        }
-        const label = labels[node.slugSegment] ?? labels[node.displayName]
-        if (label) node.displayName = label
-      },
-    })''' % entries
-          layout = Path('quartz/quartz.layout.ts')
-          layout_text = layout.read_text(encoding='utf-8')
-          layout_text = layout_text.replace('Component.Explorer(),', explorer + ',')
-          layout.write_text(layout_text, encoding='utf-8')
           PY
+
       - name: Build Quartz
         working-directory: quartz
         run: npx quartz build
+
       - name: Disable Jekyll
         run: touch quartz/public/.nojekyll
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: quartz/public
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
