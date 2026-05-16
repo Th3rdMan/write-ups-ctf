@@ -1,4 +1,4 @@
-# L'ingenieur de l'ombre
+# L’ingénieur de l’ombre
 
 ![3. L'ingénieur de l'ombre](./assets/3-lingenieur-de-lombre.png)
 
@@ -6,14 +6,14 @@
 
 Au sein du réseau, chaque agent porte un nom d’animal. Celui de Romon est celui d’un oiseau blanc. Retrouvez-le.
 
-**Format du flag** : poney
+**Format du flag** : `poney`
 
 ---
 
-Rien de très compliqué. J'ai un nom, un prénom. Petite recherche Wikipedia pour trouver la page de cet officier des transmissions. Il y est précisé dans les premières lignes son pseudonyme :
+L’énoncé donne directement le nom de **Gabriel Romon**. Une recherche documentaire sur cet officier des transmissions permet de retrouver son pseudonyme dans la Résistance.
 
-[Wikipedia](https://fr.wikipedia.org/wiki/Gabriel_Romon)
+**Source :** [Wikipedia — Gabriel Romon](https://fr.wikipedia.org/wiki/Gabriel_Romon)
 
-Romon fait partie d'un certain nombre de réseaux de résistance [...] comme conseiller technique pour le secteur radio (sous le pseudonyme « **Cygne** »).
+> *Romon fait partie de plusieurs réseaux de résistance, notamment comme conseiller technique pour le secteur radio, sous le pseudonyme « **Cygne** ».*
 
 ✅ **Réponse :** `cygne`
