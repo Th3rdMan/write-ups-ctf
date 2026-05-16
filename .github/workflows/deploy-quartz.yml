@@ -11,7 +11,6 @@ env:
 
 permissions:
   contents: read
-  actions: read
   pages: write
   id-token: write
 
@@ -24,13 +23,13 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout write-ups
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
         with:
           path: repo
           fetch-depth: 0
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: 24
 
@@ -52,8 +51,6 @@ jobs:
             --exclude='.DS_Store' \
             repo/ quartz/content/
 
-          # Quartz uses index.md as the landing page for folders.
-          # Keep README.md for GitHub, but only duplicate it when a custom index.md does not already exist.
           find quartz/content -name README.md -print0 | while IFS= read -r -d '' file; do
             target="$(dirname "$file")/index.md"
             if [ ! -f "$target" ]; then
@@ -61,7 +58,6 @@ jobs:
             fi
           done
 
-          # README.md files are useful on GitHub but redundant in the Quartz explorer once index.md exists.
           find quartz/content -name README.md -delete
 
       - name: Configure Quartz
@@ -83,29 +79,16 @@ jobs:
       title: "Explorateur",
       useSavedState: false,
       mapFn: (node) => {
-        const labels: Record<string, string> = {
+        const labels = {
           "Bleuet 2026": "Bleuet 2026",
           "bleuet-2026": "Bleuet 2026",
           "01-prologue": "01 - Prologue",
-          "01 Prologue": "01 - Prologue",
-          "01 - Prologue": "01 - Prologue",
           "02-dans-la-peau-dun-resistant": "02 - Dans la peau d’un résistant",
-          "02 Dans la peau d’un résistant": "02 - Dans la peau d’un résistant",
-          "02 - Dans la peau d’un résistant": "02 - Dans la peau d’un résistant",
           "03-un-devoir-de-memoire": "03 - Un devoir de mémoire",
-          "03 Un devoir de mémoire": "03 - Un devoir de mémoire",
-          "03 - Un devoir de mémoire": "03 - Un devoir de mémoire",
           "04-lart-de-resister": "04 - L’art de résister",
-          "04 L’art de résister": "04 - L’art de résister",
-          "04 - L’art de résister": "04 - L’art de résister",
           "05-laudace-de-resister": "05 - L’audace de résister",
-          "05 L’audace de résister": "05 - L’audace de résister",
-          "05 - L’audace de résister": "05 - L’audace de résister",
           "06-nos-partenaires": "06 - Nos partenaires",
-          "06 Nos partenaires": "06 - Nos partenaires",
-          "06 - Nos partenaires": "06 - Nos partenaires",
           "bienvenue": "01 - Bienvenue",
-          "01-bienvenue": "01 - Bienvenue",
           "01-alpha-ici-bravo": "01 - Alpha ici Bravo",
           "02-decryptage-en-pique": "02 - Décryptage en piqué",
           "03-lettre-dun-soldat": "03 - Lettre d’un soldat",
@@ -134,13 +117,9 @@ jobs:
           "index-osint": "Index OSINT",
         }
 
-        const keys = [node.slugSegment, node.displayName]
-        for (const key of keys) {
-          const label = labels[key]
-          if (label) {
-            node.displayName = label
-            break
-          }
+        const label = labels[node.slugSegment] ?? labels[node.displayName]
+        if (label) {
+          node.displayName = label
         }
       },
     })'''
@@ -157,7 +136,7 @@ jobs:
         run: touch quartz/public/.nojekyll
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
         with:
           path: quartz/public
 
@@ -170,4 +149,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
