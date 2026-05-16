@@ -64,6 +64,76 @@ jobs:
           # README.md files are useful on GitHub but redundant in the Quartz explorer once index.md exists.
           find quartz/content -name README.md -delete
 
+      - name: Rename Quartz pages for clean navigation
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          from urllib.parse import quote
+
+          root = Path("quartz/content")
+
+          renames = {
+              "index-osint.md": "Index OSINT.md",
+              "Bleuet 2026/01-prologue": "Bleuet 2026/01 Prologue",
+              "Bleuet 2026/02-dans-la-peau-dun-resistant": "Bleuet 2026/02 Dans la peau d’un résistant",
+              "Bleuet 2026/03-un-devoir-de-memoire": "Bleuet 2026/03 Un devoir de mémoire",
+              "Bleuet 2026/04-lart-de-resister": "Bleuet 2026/04 L’art de résister",
+              "Bleuet 2026/05-laudace-de-resister": "Bleuet 2026/05 L’audace de résister",
+              "Bleuet 2026/06-nos-partenaires": "Bleuet 2026/06 Nos partenaires",
+              "Bleuet 2026/01 Prologue/bienvenue.md": "Bleuet 2026/01 Prologue/01 Bienvenue.md",
+              "Bleuet 2026/02 Dans la peau d’un résistant/01-alpha-ici-bravo.md": "Bleuet 2026/02 Dans la peau d’un résistant/01 Alpha ici Bravo.md",
+              "Bleuet 2026/02 Dans la peau d’un résistant/02-decryptage-en-pique.md": "Bleuet 2026/02 Dans la peau d’un résistant/02 Décryptage en piqué.md",
+              "Bleuet 2026/02 Dans la peau d’un résistant/03-lettre-dun-soldat.md": "Bleuet 2026/02 Dans la peau d’un résistant/03 Lettre d’un soldat.md",
+              "Bleuet 2026/02 Dans la peau d’un résistant/04-plastique-et-crayons.md": "Bleuet 2026/02 Dans la peau d’un résistant/04 Plastique et crayons.md",
+              "Bleuet 2026/02 Dans la peau d’un résistant/05-interception-de-code.md": "Bleuet 2026/02 Dans la peau d’un résistant/05 Interception de code.md",
+              "Bleuet 2026/02 Dans la peau d’un résistant/06-motif-aleatoire.md": "Bleuet 2026/02 Dans la peau d’un résistant/06 Motif aléatoire.md",
+              "Bleuet 2026/02 Dans la peau d’un résistant/07-le-repere.md": "Bleuet 2026/02 Dans la peau d’un résistant/07 Le repère.md",
+              "Bleuet 2026/03 Un devoir de mémoire/01-plus-quun-numero.md": "Bleuet 2026/03 Un devoir de mémoire/01 Plus qu’un numéro.md",
+              "Bleuet 2026/03 Un devoir de mémoire/02-lequipage.md": "Bleuet 2026/03 Un devoir de mémoire/02 L’équipage.md",
+              "Bleuet 2026/03 Un devoir de mémoire/03-la-charente-liberee.md": "Bleuet 2026/03 Un devoir de mémoire/03 La Charente libérée.md",
+              "Bleuet 2026/03 Un devoir de mémoire/04-les-fusilles-du-mont-valerien.md": "Bleuet 2026/03 Un devoir de mémoire/04 Les fusillés du Mont-Valérien.md",
+              "Bleuet 2026/03 Un devoir de mémoire/05-la-princesse.md": "Bleuet 2026/03 Un devoir de mémoire/05 La princesse.md",
+              "Bleuet 2026/04 L’art de résister/01-resistant-dans-lart.md": "Bleuet 2026/04 L’art de résister/01 Résistant dans l’art.md",
+              "Bleuet 2026/04 L’art de résister/02-une-oreille-pour-se-souvenir.md": "Bleuet 2026/04 L’art de résister/02 Une oreille pour se souvenir.md",
+              "Bleuet 2026/04 L’art de résister/03-des-mots-pour-contrer-les-maux.md": "Bleuet 2026/04 L’art de résister/03 Des mots pour contrer les maux.md",
+              "Bleuet 2026/04 L’art de résister/04-un-vers-pour-la-liberte.md": "Bleuet 2026/04 L’art de résister/04 Un vers pour la liberté.md",
+              "Bleuet 2026/04 L’art de résister/05-lart-et-la-resistance.md": "Bleuet 2026/04 L’art de résister/05 L’art et la résistance.md",
+              "Bleuet 2026/05 L’audace de résister/01-alias-et-acide.md": "Bleuet 2026/05 L’audace de résister/01 Alias et acide.md",
+              "Bleuet 2026/05 L’audace de résister/02-le-glacier-tenace.md": "Bleuet 2026/05 L’audace de résister/02 Le glacier tenace.md",
+              "Bleuet 2026/05 L’audace de résister/03-le-tract-dissident.md": "Bleuet 2026/05 L’audace de résister/03 Le tract dissident.md",
+              "Bleuet 2026/06 Nos partenaires/01-la-force-du-collectif.md": "Bleuet 2026/06 Nos partenaires/01 La force du collectif.md",
+              "Bleuet 2026/06 Nos partenaires/02-le-refuge-des-dechiffreurs.md": "Bleuet 2026/06 Nos partenaires/02 Le refuge des déchiffreurs.md",
+              "Bleuet 2026/06 Nos partenaires/03-lingenieur-de-lombre.md": "Bleuet 2026/06 Nos partenaires/03 L’ingénieur de l’ombre.md",
+              "Bleuet 2026/06 Nos partenaires/04-leclosion-du-souvenir.md": "Bleuet 2026/06 Nos partenaires/04 L’éclosion du souvenir.md",
+              "Bleuet 2026/06 Nos partenaires/05-medevac-needed.md": "Bleuet 2026/06 Nos partenaires/05 MEDEVAC NEEDED.md",
+          }
+
+          def enc(path: str) -> str:
+              return "/".join(quote(part) for part in path.split("/"))
+
+          replacements = {}
+          for old, new in renames.items():
+              replacements[old] = new
+              replacements[enc(old)] = enc(new)
+              replacements["./" + old] = "./" + new
+              replacements["./" + enc(old)] = "./" + enc(new)
+
+          for md in root.rglob("*.md"):
+              text = md.read_text(encoding="utf-8")
+              original = text
+              for old, new in sorted(replacements.items(), key=lambda kv: len(kv[0]), reverse=True):
+                  text = text.replace(old, new)
+              if text != original:
+                  md.write_text(text, encoding="utf-8")
+
+          for old, new in sorted(renames.items(), key=lambda kv: len(kv[0]), reverse=True):
+              src = root / old
+              dst = root / new
+              if src.exists():
+                  dst.parent.mkdir(parents=True, exist_ok=True)
+                  src.rename(dst)
+          PY
+
       - name: Configure Quartz
         run: |
           python3 <<'PY'
