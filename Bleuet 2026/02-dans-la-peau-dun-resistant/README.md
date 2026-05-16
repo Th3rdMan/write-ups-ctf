@@ -6,11 +6,11 @@ Transmissions clandestines, messages chiffrés, archives, indices de terrain : c
 |:--:|---|---:|---|
 | ✅ | [Alpha ici Bravo](./01-alpha-ici-bravo.md) | 25 | Audio OSINT · GEOINT |
 | ✅ | [Décryptage en piqué](./02-decryptage-en-pique.md) | 50 | Vidéo OSINT · IMINT |
-| ✅ | [Lettre d’un soldat](./03-lettre-dun-soldat.md) | 75 | Archives ouvertes |
+| ✅ | [Lettre d’un soldat](./03-lettre-dun-soldat.md) | 75 | Archives ouvertes · OSINT documentaire |
 | ✅ | [Plastique et crayons](./04-plastique-et-crayons.md) | 50 | IMINT · recherche historique |
-| ❌ | [Interception de code](./05-interception-de-code.md) | 100 | Crypto · OSINT historique |
+| ❌ | [Interception de code](./05-interception-de-code.md) | 100 | Cryptanalyse · OSINT historique |
 | ✅ | [Motif aléatoire](./06-motif-aleatoire.md) | 75 | Stéganographie visuelle |
-| ✅ | [Le repère](./07-le-repere.md) | 50 | GEOINT · recherche de personne |
+| ✅ | [Le repère](./07-le-repere.md) | 50 | GEOINT · recherche d’identité |
 
 ## Ressources
 
