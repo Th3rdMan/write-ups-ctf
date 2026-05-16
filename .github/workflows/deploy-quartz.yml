@@ -1,46 +1,47 @@
-name: "Deploy Quartz site to GitHub Pages"
+name: Deploy Quartz site to GitHub Pages
 
-"on":
+on:
   push:
     branches:
-      - "main"
+      - main
   workflow_dispatch:
 
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
-  contents: "read"
-  pages: "write"
-  id-token: "write"
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
   build:
-    runs-on: "ubuntu-24.04"
+    name: Build Quartz
+    runs-on: ubuntu-24.04
     steps:
-      - name: "Checkout write-ups"
-        uses: "actions/checkout@v4"
+      - name: Checkout write-ups
+        uses: actions/checkout@v4
         with:
-          path: "repo"
+          path: repo
           fetch-depth: 0
 
-      - name: "Setup Node"
-        uses: "actions/setup-node@v4"
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          node-version: "24"
+          node-version: 24
 
-      - name: "Clone Quartz"
-        run: "git clone --depth 1 --branch v4 https://github.com/jackyzha0/quartz.git quartz"
+      - name: Clone Quartz
+        run: git clone --depth 1 --branch v4 https://github.com/jackyzha0/quartz.git quartz
 
-      - name: "Install Quartz dependencies"
-        working-directory: "quartz"
-        run: "npm ci"
+      - name: Install Quartz dependencies
+        working-directory: quartz
+        run: npm ci
 
-      - name: "Prepare Quartz content"
+      - name: Prepare Quartz content
         run: |
           rm -rf quartz/content
           mkdir -p quartz/content
@@ -60,21 +61,20 @@ jobs:
 
           find quartz/content -name README.md -delete
 
-      - name: "Configure Quartz"
+      - name: Configure Quartz
         run: |
           python3 <<'PY'
           from pathlib import Path
 
           cfg = Path("quartz/quartz.config.ts")
-          text = cfg.read_text()
+          text = cfg.read_text(encoding="utf-8")
           text = text.replace('pageTitle: "Quartz 4"', 'pageTitle: "Th3rD — Write-ups CTF"')
           text = text.replace('locale: "en-US"', 'locale: "fr-FR"')
           text = text.replace('baseUrl: "quartz.jzhao.xyz"', 'baseUrl: "Th3rdMan.github.io/write-ups-ctf"')
-          cfg.write_text(text)
+          cfg.write_text(text, encoding="utf-8")
 
           layout = Path("quartz/quartz.layout.ts")
-          layout_text = layout.read_text()
-
+          layout_text = layout.read_text(encoding="utf-8")
           explorer = '''Component.Explorer({
       title: "Explorateur",
       useSavedState: false,
@@ -120,30 +120,30 @@ jobs:
         if (label) node.displayName = label
       },
     })'''
-
           layout_text = layout_text.replace('Component.Explorer(),', explorer + ',')
-          layout.write_text(layout_text)
+          layout.write_text(layout_text, encoding="utf-8")
           PY
 
-      - name: "Build Quartz"
-        working-directory: "quartz"
-        run: "npx quartz build"
+      - name: Build Quartz
+        working-directory: quartz
+        run: npx quartz build
 
-      - name: "Disable Jekyll"
-        run: "touch quartz/public/.nojekyll"
+      - name: Disable Jekyll
+        run: touch quartz/public/.nojekyll
 
-      - name: "Upload Pages artifact"
-        uses: "actions/upload-pages-artifact@v3"
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: "quartz/public"
+          path: quartz/public
 
   deploy:
-    needs: "build"
-    runs-on: "ubuntu-24.04"
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-24.04
     environment:
-      name: "github-pages"
-      url: "${{ steps.deployment.outputs.page_url }}"
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: "Deploy to GitHub Pages"
-        id: "deployment"
-        uses: "actions/deploy-pages@v4"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
