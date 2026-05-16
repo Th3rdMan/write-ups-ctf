@@ -64,167 +64,6 @@ jobs:
           # README.md files are useful on GitHub but redundant in the Quartz explorer once index.md exists.
           find quartz/content -name README.md -delete
 
-      - name: Rename Quartz pages for clean navigation
-        run: |
-          python3 <<'PY'
-          from pathlib import Path
-          from urllib.parse import quote
-
-          root = Path("quartz/content")
-
-          # These renames apply only to the generated Quartz site.
-          # The GitHub repository keeps stable, slug-friendly paths.
-          directory_renames = {
-              "Bleuet 2026/01-prologue": "Bleuet 2026/01 - Prologue",
-              "Bleuet 2026/02-dans-la-peau-dun-resistant": "Bleuet 2026/02 - Dans la peau d’un résistant",
-              "Bleuet 2026/03-un-devoir-de-memoire": "Bleuet 2026/03 - Un devoir de mémoire",
-              "Bleuet 2026/04-lart-de-resister": "Bleuet 2026/04 - L’art de résister",
-              "Bleuet 2026/05-laudace-de-resister": "Bleuet 2026/05 - L’audace de résister",
-              "Bleuet 2026/06-nos-partenaires": "Bleuet 2026/06 - Nos partenaires",
-          }
-
-          file_renames = {
-              "index-osint.md": "Index OSINT.md",
-              "Bleuet 2026/01 - Prologue/bienvenue.md": "Bleuet 2026/01 - Prologue/01 - Bienvenue.md",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/01-alpha-ici-bravo.md": "Bleuet 2026/02 - Dans la peau d’un résistant/01 - Alpha ici Bravo.md",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/02-decryptage-en-pique.md": "Bleuet 2026/02 - Dans la peau d’un résistant/02 - Décryptage en piqué.md",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/03-lettre-dun-soldat.md": "Bleuet 2026/02 - Dans la peau d’un résistant/03 - Lettre d’un soldat.md",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/04-plastique-et-crayons.md": "Bleuet 2026/02 - Dans la peau d’un résistant/04 - Plastique et crayons.md",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/05-interception-de-code.md": "Bleuet 2026/02 - Dans la peau d’un résistant/05 - Interception de code.md",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/06-motif-aleatoire.md": "Bleuet 2026/02 - Dans la peau d’un résistant/06 - Motif aléatoire.md",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/07-le-repere.md": "Bleuet 2026/02 - Dans la peau d’un résistant/07 - Le repère.md",
-              "Bleuet 2026/03 - Un devoir de mémoire/01-plus-quun-numero.md": "Bleuet 2026/03 - Un devoir de mémoire/01 - Plus qu’un numéro.md",
-              "Bleuet 2026/03 - Un devoir de mémoire/02-lequipage.md": "Bleuet 2026/03 - Un devoir de mémoire/02 - L’équipage.md",
-              "Bleuet 2026/03 - Un devoir de mémoire/03-la-charente-liberee.md": "Bleuet 2026/03 - Un devoir de mémoire/03 - La Charente libérée.md",
-              "Bleuet 2026/03 - Un devoir de mémoire/04-les-fusilles-du-mont-valerien.md": "Bleuet 2026/03 - Un devoir de mémoire/04 - Les fusillés du Mont-Valérien.md",
-              "Bleuet 2026/03 - Un devoir de mémoire/05-la-princesse.md": "Bleuet 2026/03 - Un devoir de mémoire/05 - La princesse.md",
-              "Bleuet 2026/04 - L’art de résister/01-resistant-dans-lart.md": "Bleuet 2026/04 - L’art de résister/01 - Résistant dans l’art.md",
-              "Bleuet 2026/04 - L’art de résister/02-une-oreille-pour-se-souvenir.md": "Bleuet 2026/04 - L’art de résister/02 - Une oreille pour se souvenir.md",
-              "Bleuet 2026/04 - L’art de résister/03-des-mots-pour-contrer-les-maux.md": "Bleuet 2026/04 - L’art de résister/03 - Des mots pour contrer les maux.md",
-              "Bleuet 2026/04 - L’art de résister/04-un-vers-pour-la-liberte.md": "Bleuet 2026/04 - L’art de résister/04 - Un vers pour la liberté.md",
-              "Bleuet 2026/04 - L’art de résister/05-lart-et-la-resistance.md": "Bleuet 2026/04 - L’art de résister/05 - L’art et la résistance.md",
-              "Bleuet 2026/05 - L’audace de résister/01-alias-et-acide.md": "Bleuet 2026/05 - L’audace de résister/01 - Alias et acide.md",
-              "Bleuet 2026/05 - L’audace de résister/02-le-glacier-tenace.md": "Bleuet 2026/05 - L’audace de résister/02 - Le glacier tenace.md",
-              "Bleuet 2026/05 - L’audace de résister/03-le-tract-dissident.md": "Bleuet 2026/05 - L’audace de résister/03 - Le tract dissident.md",
-              "Bleuet 2026/06 - Nos partenaires/01-la-force-du-collectif.md": "Bleuet 2026/06 - Nos partenaires/01 - La force du collectif.md",
-              "Bleuet 2026/06 - Nos partenaires/02-le-refuge-des-dechiffreurs.md": "Bleuet 2026/06 - Nos partenaires/02 - Le refuge des déchiffreurs.md",
-              "Bleuet 2026/06 - Nos partenaires/03-lingenieur-de-lombre.md": "Bleuet 2026/06 - Nos partenaires/03 - L’ingénieur de l’ombre.md",
-              "Bleuet 2026/06 - Nos partenaires/04-leclosion-du-souvenir.md": "Bleuet 2026/06 - Nos partenaires/04 - L’éclosion du souvenir.md",
-              "Bleuet 2026/06 - Nos partenaires/05-medevac-needed.md": "Bleuet 2026/06 - Nos partenaires/05 - MEDEVAC NEEDED.md",
-          }
-
-          def enc(path: str) -> str:
-              return "/".join(quote(part) for part in path.split("/"))
-
-          direct_link_renames = {
-              "index-osint.md": "Index OSINT.md",
-              "Bleuet 2026/01-prologue/bienvenue.md": "Bleuet 2026/01 - Prologue/01 - Bienvenue.md",
-              "Bleuet 2026/02-dans-la-peau-dun-resistant/01-alpha-ici-bravo.md": "Bleuet 2026/02 - Dans la peau d’un résistant/01 - Alpha ici Bravo.md",
-              "Bleuet 2026/02-dans-la-peau-dun-resistant/02-decryptage-en-pique.md": "Bleuet 2026/02 - Dans la peau d’un résistant/02 - Décryptage en piqué.md",
-              "Bleuet 2026/02-dans-la-peau-dun-resistant/03-lettre-dun-soldat.md": "Bleuet 2026/02 - Dans la peau d’un résistant/03 - Lettre d’un soldat.md",
-              "Bleuet 2026/02-dans-la-peau-dun-resistant/04-plastique-et-crayons.md": "Bleuet 2026/02 - Dans la peau d’un résistant/04 - Plastique et crayons.md",
-              "Bleuet 2026/02-dans-la-peau-dun-resistant/05-interception-de-code.md": "Bleuet 2026/02 - Dans la peau d’un résistant/05 - Interception de code.md",
-              "Bleuet 2026/02-dans-la-peau-dun-resistant/06-motif-aleatoire.md": "Bleuet 2026/02 - Dans la peau d’un résistant/06 - Motif aléatoire.md",
-              "Bleuet 2026/02-dans-la-peau-dun-resistant/07-le-repere.md": "Bleuet 2026/02 - Dans la peau d’un résistant/07 - Le repère.md",
-              "Bleuet 2026/03-un-devoir-de-memoire/01-plus-quun-numero.md": "Bleuet 2026/03 - Un devoir de mémoire/01 - Plus qu’un numéro.md",
-              "Bleuet 2026/03-un-devoir-de-memoire/02-lequipage.md": "Bleuet 2026/03 - Un devoir de mémoire/02 - L’équipage.md",
-              "Bleuet 2026/03-un-devoir-de-memoire/03-la-charente-liberee.md": "Bleuet 2026/03 - Un devoir de mémoire/03 - La Charente libérée.md",
-              "Bleuet 2026/03-un-devoir-de-memoire/04-les-fusilles-du-mont-valerien.md": "Bleuet 2026/03 - Un devoir de mémoire/04 - Les fusillés du Mont-Valérien.md",
-              "Bleuet 2026/03-un-devoir-de-memoire/05-la-princesse.md": "Bleuet 2026/03 - Un devoir de mémoire/05 - La princesse.md",
-              "Bleuet 2026/04-lart-de-resister/01-resistant-dans-lart.md": "Bleuet 2026/04 - L’art de résister/01 - Résistant dans l’art.md",
-              "Bleuet 2026/04-lart-de-resister/02-une-oreille-pour-se-souvenir.md": "Bleuet 2026/04 - L’art de résister/02 - Une oreille pour se souvenir.md",
-              "Bleuet 2026/04-lart-de-resister/03-des-mots-pour-contrer-les-maux.md": "Bleuet 2026/04 - L’art de résister/03 - Des mots pour contrer les maux.md",
-              "Bleuet 2026/04-lart-de-resister/04-un-vers-pour-la-liberte.md": "Bleuet 2026/04 - L’art de résister/04 - Un vers pour la liberté.md",
-              "Bleuet 2026/04-lart-de-resister/05-lart-et-la-resistance.md": "Bleuet 2026/04 - L’art de résister/05 - L’art et la résistance.md",
-              "Bleuet 2026/05-laudace-de-resister/01-alias-et-acide.md": "Bleuet 2026/05 - L’audace de résister/01 - Alias et acide.md",
-              "Bleuet 2026/05-laudace-de-resister/02-le-glacier-tenace.md": "Bleuet 2026/05 - L’audace de résister/02 - Le glacier tenace.md",
-              "Bleuet 2026/05-laudace-de-resister/03-le-tract-dissident.md": "Bleuet 2026/05 - L’audace de résister/03 - Le tract dissident.md",
-              "Bleuet 2026/06-nos-partenaires/01-la-force-du-collectif.md": "Bleuet 2026/06 - Nos partenaires/01 - La force du collectif.md",
-              "Bleuet 2026/06-nos-partenaires/02-le-refuge-des-dechiffreurs.md": "Bleuet 2026/06 - Nos partenaires/02 - Le refuge des déchiffreurs.md",
-              "Bleuet 2026/06-nos-partenaires/03-lingenieur-de-lombre.md": "Bleuet 2026/06 - Nos partenaires/03 - L’ingénieur de l’ombre.md",
-              "Bleuet 2026/06-nos-partenaires/04-leclosion-du-souvenir.md": "Bleuet 2026/06 - Nos partenaires/04 - L’éclosion du souvenir.md",
-              "Bleuet 2026/06-nos-partenaires/05-medevac-needed.md": "Bleuet 2026/06 - Nos partenaires/05 - MEDEVAC NEEDED.md",
-          }
-
-          page_titles = {
-              "Bleuet 2026/index.md": "Bleuet de France V5 — 2026",
-              "Bleuet 2026/01 - Prologue/index.md": "01 - Prologue",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/index.md": "02 - Dans la peau d’un résistant",
-              "Bleuet 2026/03 - Un devoir de mémoire/index.md": "03 - Un devoir de mémoire",
-              "Bleuet 2026/04 - L’art de résister/index.md": "04 - L’art de résister",
-              "Bleuet 2026/05 - L’audace de résister/index.md": "05 - L’audace de résister",
-              "Bleuet 2026/06 - Nos partenaires/index.md": "06 - Nos partenaires",
-              "Bleuet 2026/01 - Prologue/01 - Bienvenue.md": "01 - Bienvenue",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/01 - Alpha ici Bravo.md": "01 - Alpha ici Bravo",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/02 - Décryptage en piqué.md": "02 - Décryptage en piqué",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/03 - Lettre d’un soldat.md": "03 - Lettre d’un soldat",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/04 - Plastique et crayons.md": "04 - Plastique et crayons",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/05 - Interception de code.md": "05 - Interception de code",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/06 - Motif aléatoire.md": "06 - Motif aléatoire",
-              "Bleuet 2026/02 - Dans la peau d’un résistant/07 - Le repère.md": "07 - Le repère",
-              "Bleuet 2026/03 - Un devoir de mémoire/01 - Plus qu’un numéro.md": "01 - Plus qu’un numéro",
-              "Bleuet 2026/03 - Un devoir de mémoire/02 - L’équipage.md": "02 - L’équipage",
-              "Bleuet 2026/03 - Un devoir de mémoire/03 - La Charente libérée.md": "03 - La Charente libérée",
-              "Bleuet 2026/03 - Un devoir de mémoire/04 - Les fusillés du Mont-Valérien.md": "04 - Les fusillés du Mont-Valérien",
-              "Bleuet 2026/03 - Un devoir de mémoire/05 - La princesse.md": "05 - La princesse",
-              "Bleuet 2026/04 - L’art de résister/01 - Résistant dans l’art.md": "01 - Résistant dans l’art",
-              "Bleuet 2026/04 - L’art de résister/02 - Une oreille pour se souvenir.md": "02 - Une oreille pour se souvenir",
-              "Bleuet 2026/04 - L’art de résister/03 - Des mots pour contrer les maux.md": "03 - Des mots pour contrer les maux",
-              "Bleuet 2026/04 - L’art de résister/04 - Un vers pour la liberté.md": "04 - Un vers pour la liberté",
-              "Bleuet 2026/04 - L’art de résister/05 - L’art et la résistance.md": "05 - L’art et la résistance",
-              "Bleuet 2026/05 - L’audace de résister/01 - Alias et acide.md": "01 - Alias et acide",
-              "Bleuet 2026/05 - L’audace de résister/02 - Le glacier tenace.md": "02 - Le glacier tenace",
-              "Bleuet 2026/05 - L’audace de résister/03 - Le tract dissident.md": "03 - Le tract dissident",
-              "Bleuet 2026/06 - Nos partenaires/01 - La force du collectif.md": "01 - La force du collectif",
-              "Bleuet 2026/06 - Nos partenaires/02 - Le refuge des déchiffreurs.md": "02 - Le refuge des déchiffreurs",
-              "Bleuet 2026/06 - Nos partenaires/03 - L’ingénieur de l’ombre.md": "03 - L’ingénieur de l’ombre",
-              "Bleuet 2026/06 - Nos partenaires/04 - L’éclosion du souvenir.md": "04 - L’éclosion du souvenir",
-              "Bleuet 2026/06 - Nos partenaires/05 - MEDEVAC NEEDED.md": "05 - MEDEVAC NEEDED",
-          }
-
-          replacements = {}
-          for mapping in (direct_link_renames, directory_renames, file_renames):
-              for old, new in mapping.items():
-                  replacements[old] = new
-                  replacements[enc(old)] = enc(new)
-                  replacements["./" + old] = "./" + new
-                  replacements["./" + enc(old)] = "./" + enc(new)
-
-          for md in root.rglob("*.md"):
-              text = md.read_text(encoding="utf-8")
-              original = text
-              for old, new in sorted(replacements.items(), key=lambda kv: len(kv[0]), reverse=True):
-                  text = text.replace(old, new)
-              if text != original:
-                  md.write_text(text, encoding="utf-8")
-
-          for renames in (directory_renames, file_renames):
-              for old, new in sorted(renames.items(), key=lambda kv: len(kv[0]), reverse=True):
-                  src = root / old
-                  dst = root / new
-                  if src.exists():
-                      dst.parent.mkdir(parents=True, exist_ok=True)
-                      src.rename(dst)
-
-          def add_or_replace_title(path: Path, title: str):
-              text = path.read_text(encoding="utf-8")
-              if text.startswith("---\n"):
-                  end = text.find("\n---\n", 4)
-                  if end != -1:
-                      body = text[end + 5:]
-                      fm = text[4:end].splitlines()
-                      fm = [line for line in fm if not line.startswith("title:")]
-                      new_fm = [f'title: "{title}"', *fm]
-                      path.write_text("---\n" + "\n".join(new_fm).strip() + "\n---\n\n" + body.lstrip(), encoding="utf-8")
-                      return
-              path.write_text(f'---\ntitle: "{title}"\n---\n\n' + text, encoding="utf-8")
-
-          for rel, title in page_titles.items():
-              path = root / rel
-              if path.exists():
-                  add_or_replace_title(path, title)
-          PY
-
       - name: Configure Quartz
         run: |
           python3 <<'PY'
@@ -236,6 +75,78 @@ jobs:
           text = text.replace('locale: "en-US"', 'locale: "fr-FR"')
           text = text.replace('baseUrl: "quartz.jzhao.xyz"', 'baseUrl: "Th3rdMan.github.io/write-ups-ctf"')
           cfg.write_text(text)
+
+          layout = Path("quartz/quartz.layout.ts")
+          layout_text = layout.read_text()
+
+          explorer = '''Component.Explorer({
+      title: "Explorateur",
+      useSavedState: false,
+      mapFn: (node) => {
+        const labels: Record<string, string> = {
+          "Bleuet 2026": "Bleuet 2026",
+          "bleuet-2026": "Bleuet 2026",
+          "01-prologue": "01 - Prologue",
+          "01 Prologue": "01 - Prologue",
+          "01 - Prologue": "01 - Prologue",
+          "02-dans-la-peau-dun-resistant": "02 - Dans la peau d’un résistant",
+          "02 Dans la peau d’un résistant": "02 - Dans la peau d’un résistant",
+          "02 - Dans la peau d’un résistant": "02 - Dans la peau d’un résistant",
+          "03-un-devoir-de-memoire": "03 - Un devoir de mémoire",
+          "03 Un devoir de mémoire": "03 - Un devoir de mémoire",
+          "03 - Un devoir de mémoire": "03 - Un devoir de mémoire",
+          "04-lart-de-resister": "04 - L’art de résister",
+          "04 L’art de résister": "04 - L’art de résister",
+          "04 - L’art de résister": "04 - L’art de résister",
+          "05-laudace-de-resister": "05 - L’audace de résister",
+          "05 L’audace de résister": "05 - L’audace de résister",
+          "05 - L’audace de résister": "05 - L’audace de résister",
+          "06-nos-partenaires": "06 - Nos partenaires",
+          "06 Nos partenaires": "06 - Nos partenaires",
+          "06 - Nos partenaires": "06 - Nos partenaires",
+          "bienvenue": "01 - Bienvenue",
+          "01-bienvenue": "01 - Bienvenue",
+          "01-alpha-ici-bravo": "01 - Alpha ici Bravo",
+          "02-decryptage-en-pique": "02 - Décryptage en piqué",
+          "03-lettre-dun-soldat": "03 - Lettre d’un soldat",
+          "04-plastique-et-crayons": "04 - Plastique et crayons",
+          "05-interception-de-code": "05 - Interception de code",
+          "06-motif-aleatoire": "06 - Motif aléatoire",
+          "07-le-repere": "07 - Le repère",
+          "01-plus-quun-numero": "01 - Plus qu’un numéro",
+          "02-lequipage": "02 - L’équipage",
+          "03-la-charente-liberee": "03 - La Charente libérée",
+          "04-les-fusilles-du-mont-valerien": "04 - Les fusillés du Mont-Valérien",
+          "05-la-princesse": "05 - La princesse",
+          "01-resistant-dans-lart": "01 - Résistant dans l’art",
+          "02-une-oreille-pour-se-souvenir": "02 - Une oreille pour se souvenir",
+          "03-des-mots-pour-contrer-les-maux": "03 - Des mots pour contrer les maux",
+          "04-un-vers-pour-la-liberte": "04 - Un vers pour la liberté",
+          "05-lart-et-la-resistance": "05 - L’art et la résistance",
+          "01-alias-et-acide": "01 - Alias et acide",
+          "02-le-glacier-tenace": "02 - Le glacier tenace",
+          "03-le-tract-dissident": "03 - Le tract dissident",
+          "01-la-force-du-collectif": "01 - La force du collectif",
+          "02-le-refuge-des-dechiffreurs": "02 - Le refuge des déchiffreurs",
+          "03-lingenieur-de-lombre": "03 - L’ingénieur de l’ombre",
+          "04-leclosion-du-souvenir": "04 - L’éclosion du souvenir",
+          "05-medevac-needed": "05 - MEDEVAC NEEDED",
+          "index-osint": "Index OSINT",
+        }
+
+        const keys = [node.slugSegment, node.displayName]
+        for (const key of keys) {
+          const label = labels[key]
+          if (label) {
+            node.displayName = label
+            break
+          }
+        }
+      },
+    })'''
+
+          layout_text = layout_text.replace('Component.Explorer(),', explorer + ',')
+          layout.write_text(layout_text)
           PY
 
       - name: Build Quartz
